@@ -238,15 +238,32 @@ const SquaresAnimation: React.FC<SquaresAnimationProps> = ({
     });
   }, [dimensions.width, isPageVisible, maxTrains, createNewTrain]);
   
+  // Ref per il timestamp dell'ultimo frame
+  const lastTimeRef = useRef<number>(0);
+  
   // Ciclo di animazione
-  const animate = useCallback(() => {
+  const animate = useCallback((timestamp: number) => {
+    // Se è il primo frame, inizializza il timestamp
+    if (!lastTimeRef.current) {
+      lastTimeRef.current = timestamp;
+    }
+    
+    // Calcola il delta time (in secondi)
+    const deltaTime = (timestamp - lastTimeRef.current) / 1000;
+    lastTimeRef.current = timestamp;
+    
+    // Limita il deltaTime per evitare salti troppo grandi
+    // (ad esempio quando la scheda del browser è inattiva)
+    const cappedDeltaTime = Math.min(deltaTime, 0.1);
+    
     setTrains(prevTrains => {
       // Aggiorna la posizione di ogni treno in base alla direzione
+      // Moltiplica la velocità per il deltaTime per ottenere un movimento costante
       const updatedTrains = prevTrains.map(train => ({
         ...train,
         y: train.direction === 'down' 
-          ? train.y + train.speed  // Muovi verso il basso
-          : train.y - train.speed  // Muovi verso l'alto
+          ? train.y + (train.speed * 60 * cappedDeltaTime)  // Muovi verso il basso
+          : train.y - (train.speed * 60 * cappedDeltaTime)  // Muovi verso l'alto
       }));
       
       // Rimuovi i treni che sono usciti dallo schermo

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:optimized": "next build && ./scripts/optimize-images.sh",
     "start": "next start",
     "lint": "next lint"
   },

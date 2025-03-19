@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -80,9 +81,11 @@ const HeroSection = () => {
                       {/* Terminal content with bank image */}
                       <div className="flex-1 p-2 flex items-center justify-center">
                         <div className="flex items-center space-x-3">
-                          <img 
-                            src="/bank.png" 
+                          <Image 
+                            src="/images/bank.png" 
                             alt="Banking AI Visualization" 
+                            width={96}
+                            height={96}
                             className="h-24 w-auto object-contain"
                           />
                           <div className="h-24 w-px bg-gray-700"></div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -54,9 +55,11 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
-              <img 
+              <Image 
                 src="/images/DEEP4IT_logo.png" 
                 alt="Deep4IT Logo" 
+                width={96}
+                height={24}
                 className="h-6 w-auto" 
               />
             </Link>
