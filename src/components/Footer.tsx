@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company info */}
           <div className="col-span-1">
-            <Link href="/" className="text-purple-500 font-bold text-h3 mb-4 block">
+            <Link href="/" className="text-primary font-bold text-h3 mb-4 block">
               Deep4IT
             </Link>
             <p className="text-gray-400 text-body-sm mb-6">
@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="flex">
               <a
                 href="https://www.linkedin.com/company/deep4it"
-                className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                className="text-gray-400 hover:text-primary transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -43,7 +43,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-body-sm"
+                    className="text-gray-400 hover:text-primary transition-colors duration-300 text-body-sm"
                   >
                     {link.label}
                   </Link>
@@ -57,17 +57,17 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4 text-h4">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <MapPin size={18} className="text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+                <MapPin size={18} className="text-primary mr-2 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-400 text-body-sm">
                   Via Italia, 44<br />
                   20900 Monza, Italy
                 </span>
               </li>
               <li className="flex items-start">
-                <Mail size={18} className="text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+                <Mail size={18} className="text-primary mr-2 mt-0.5 flex-shrink-0" />
                 <a
                   href="mailto:info@deep4it.com"
-                  className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-body-sm"
+                  className="text-gray-400 hover:text-primary transition-colors duration-300 text-body-sm"
                 >
                   info@deep4it.com
                 </a>
@@ -88,7 +88,7 @@ const Footer = () => {
               Powered by Next.js
             </span>
             <span className="text-gray-500 text-caption px-2 py-1 bg-gray-900 rounded-full flex items-center h-7">
-              <span className="text-purple-500">AI</span> Enhanced
+              <span className="text-primary">AI</span> Enhanced
             </span>
           </div>
         </div>

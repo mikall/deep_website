@@ -89,7 +89,7 @@ const SelectionsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            <span className="text-purple-500">Recognition</span>
+            <span className="text-primary">Recognition</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
             Deep4IT has been recognized and selected by leading organizations in the financial and technology sectors.
@@ -119,7 +119,7 @@ const SelectionsSection = () => {
                     />
                   </div>
                   <div className="flex justify-between items-center mb-1">
-                    <div className="text-purple-400 text-caption font-semibold">
+                    <div className="text-primary/90 text-caption font-semibold">
                       {selection.year}
                     </div>
                     <div className="text-gray-400 text-caption">

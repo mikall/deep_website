@@ -76,7 +76,7 @@ const Navbar = () => {
               <NavLink href="#roadmap" label="Roadmap" />
               <Link 
                 href="#contact" 
-                className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 border border-purple-700 hover:border-purple-500 flex items-center justify-center h-8"
+                className="bg-primary hover:bg-primary/80 text-primary-foreground px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 flex items-center justify-center h-8"
                 onClick={(e) => {
                   e.preventDefault();
                   const contactSection = document.querySelector('footer');
@@ -132,7 +132,7 @@ const Navbar = () => {
           <div className="pt-4 pb-2">
             <Link 
               href="#contact" 
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 border border-purple-700 hover:border-purple-500 block text-center"
+              className="w-full bg-primary hover:bg-primary/80 text-primary-foreground px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 block text-center"
               onClick={(e) => {
                 e.preventDefault();
                 setIsOpen(false);
@@ -161,7 +161,7 @@ const Navbar = () => {
 const NavLink = ({ href, label }: { href: string; label: string }) => (
   <Link
     href={href}
-    className="text-gray-300 hover:text-purple-400 px-3 py-2 text-body-sm font-medium transition-colors duration-300 flex items-center justify-center h-8"
+    className="text-gray-300 hover:text-primary px-3 py-2 text-body-sm font-medium transition-colors duration-300 flex items-center justify-center h-8"
     onClick={(e) => {
       e.preventDefault();
       const targetId = href.replace('#', '');
@@ -194,7 +194,7 @@ const MobileNavLink = ({
 }) => (
   <Link
     href={href}
-    className="text-gray-300 hover:text-purple-400 block px-3 py-2 rounded-md text-body font-medium border-l-2 border-transparent hover:border-purple-500 transition-all duration-300"
+    className="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-body font-medium border-l-2 border-transparent hover:border-primary transition-all duration-300"
     onClick={(e) => onClick(e, href)}
   >
     {label}

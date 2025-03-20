@@ -28,49 +28,49 @@ const useCases: UseCase[] = [
     id: 1,
     title: "Transaction Categorisation",
     description: "Automatically classifying spending into precise categories to provide customers with meaningful insights into their financial behaviour and enable more sophisticated analysis.",
-    icon: <Tags className="w-8 h-8 text-purple-400" />,
+    icon: <Tags className="w-8 h-8 text-primary" />,
   },
   {
     id: 2,
     title: "Cross-Selling & Upselling",
     description: "Analysing spending patterns to recommend relevant financial products precisely when customers need them, enhancing conversion rates through timely, personalised offers.",
-    icon: <ShoppingCart className="w-8 h-8 text-purple-400" />,
+    icon: <ShoppingCart className="w-8 h-8 text-primary" />,
   },
   {
     id: 3,
     title: "Churn Prediction & Retention",
     description: "Identifying early warning signals of account dormancy or customer dissatisfaction to trigger proactive retention measures before customers consider switching banks.",
-    icon: <UserCheck className="w-8 h-8 text-purple-400" />,
+    icon: <UserCheck className="w-8 h-8 text-primary" />,
   },
   {
     id: 4,
     title: "Life Event Detection",
     description: "Recognising spending pattern changes that indicate significant life events (home purchase, marriage, childbirth, retirement) to offer relevant financial solutions at crucial decision points.",
-    icon: <Search className="w-8 h-8 text-purple-400" />,
+    icon: <Search className="w-8 h-8 text-primary" />,
   },
   {
     id: 5,
     title: "Personal Financial Management",
     description: "Providing customers with intelligent budgeting assistance, spending categorisation, and personalised savings goals based on their projected financial situation.",
-    icon: <Wallet className="w-8 h-8 text-purple-400" />,
+    icon: <Wallet className="w-8 h-8 text-primary" />,
   },
   {
     id: 6,
     title: "Enhanced Credit Scoring",
     description: "Supplementing traditional credit assessment with behavioural spending metrics for more accurate lending decisions while detecting early signs of financial distress before formal delinquency occurs.",
-    icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
+    icon: <TrendingUp className="w-8 h-8 text-primary" />,
   },
   {
     id: 7,
     title: "Fraudster Identification",
     description: "Detecting patterns consistent with fraudulent actors rather than just fraudulent transactions, enabling the bank to proactively identify potentially suspicious customers before multiple fraud attempts occur.",
-    icon: <Shield className="w-8 h-8 text-purple-400" />,
+    icon: <Shield className="w-8 h-8 text-primary" />,
   },
   {
     id: 8,
     title: "Investment Intention Forecasting",
     description: "Predicting when customers are likely to have surplus funds available for investment based on spending and saving behaviours.",
-    icon: <PiggyBank className="w-8 h-8 text-purple-400" />,
+    icon: <PiggyBank className="w-8 h-8 text-primary" />,
   },
 ];
 
@@ -152,7 +152,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            <span className="text-purple-500">Proposition</span>
+            <span className="text-primary">Proposition</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
             At Deep4IT, we amplify your business capabilities to make smarter decisions and create innovative services by transforming complex transaction data into actionable insights through the power of AI and our pioneering Large Transaction Models (LTMs).
@@ -162,7 +162,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-2 md:order-1">
             <h3 className="text-h3 text-white">
-              Banking-Specific <span className="text-purple-500">AI Platform</span>
+              Banking-Specific <span className="text-primary">AI Platform</span>
             </h3>
             <p className="text-body text-gray-300 mb-6">
               Join the ranks of forward-thinking financial institutions leveraging our banking-specific AI platform to stay ahead in today&apos;s competitive market and unlock the full potential of your customer data.
@@ -175,8 +175,8 @@ const AboutSection = () => {
                 "Bank-level data security",
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-purple-900 flex items-center justify-center mr-3 mt-0.5">
-                    <div className="h-2 w-2 bg-purple-500 rounded-full animate-ping"></div>
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="h-2 w-2 bg-primary rounded-full animate-ping"></div>
                   </div>
                   <span className="text-gray-300">{item}</span>
                 </li>
@@ -185,7 +185,7 @@ const AboutSection = () => {
           </div>
           <div className="order-1 md:order-2">
             <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-purple-400 rounded-lg blur opacity-30 animate-pulse"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/70 rounded-lg blur opacity-30 animate-pulse"></div>
               <div className="relative bg-black border border-gray-800 rounded-lg p-6 shadow-xl">
                 {/* Bank Statement Header */}
                 <div className="flex justify-between items-center mb-4 border-b border-gray-800 pb-2">
@@ -202,7 +202,7 @@ const AboutSection = () => {
                     </div>
                     <div>
                       <div className="text-xs text-gray-400 mb-1">Current Balance</div>
-                      <div className="h-3 bg-purple-900 rounded w-1/2 animate-pulse"></div>
+                      <div className="h-3 bg-primary/30 rounded w-1/2 animate-pulse"></div>
                     </div>
                   </div>
                 </div>
@@ -244,7 +244,7 @@ const AboutSection = () => {
                         
                         {/* Amount placeholder - first one purple, others gray */}
                         <div className="w-1/5 flex justify-end">
-                          <div className={`h-2 ${index === 0 ? 'bg-purple-900' : 'bg-gray-800'} rounded w-2/3 animate-pulse`}
+                          <div className={`h-2 ${index === 0 ? 'bg-primary/30' : 'bg-gray-800'} rounded w-2/3 animate-pulse`}
                                style={{ animationDelay: `${index * 0.1 + 0.15}s` }}></div>
                         </div>
                       </div>
@@ -254,7 +254,7 @@ const AboutSection = () => {
                 
                 {/* Data Insights Section */}
                 <div className="mt-4 h-24 bg-gray-900 rounded border border-gray-800 flex items-center justify-center">
-                  <div className="text-purple-500 text-xs font-mono">
+                  <div className="text-primary text-xs font-mono">
                     [<span className="text-gray-500">data</span>] <span className="text-white">to</span> <span className="text-green-500">insights</span>
                   </div>
                 </div>
@@ -265,7 +265,7 @@ const AboutSection = () => {
 
         <div className="mb-8 text-center">
           <h3 className="text-h3 text-white">
-            Use <span className="text-purple-500">Cases</span>
+            Use <span className="text-primary">Cases</span>
           </h3>
           <p className="text-body text-gray-300 max-w-2xl mx-auto">
             Discover how Deep4IT can revolutionize your decision-making process with our Large Transaction Models.
@@ -280,7 +280,7 @@ const AboutSection = () => {
               prevSlide();
               resetAutoplay();
             }}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full border border-gray-700 transition-all duration-300 hover:border-purple-500"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full border border-gray-700 transition-all duration-300 hover:border-primary"
             aria-label="Previous slide"
           >
             <ChevronLeft size={24} />
@@ -290,7 +290,7 @@ const AboutSection = () => {
               nextSlide();
               resetAutoplay();
             }}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full border border-gray-700 transition-all duration-300 hover:border-purple-500"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full border border-gray-700 transition-all duration-300 hover:border-primary"
             aria-label="Next slide"
           >
             <ChevronRight size={24} />
@@ -312,13 +312,13 @@ const AboutSection = () => {
             >
               {useCases.map((useCase) => (
                 <div key={useCase.id} className="w-full md:w-1/3 flex-shrink-0 px-4 py-2">
-                  <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 h-full transition-all duration-300 hover:border-purple-700 hover:shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                  <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 h-full transition-all duration-300 hover:border-primary hover:shadow-[0_0_15px_rgba(193,43,231,0.4)]">
                     <div className="flex flex-col h-full">
                       <div className="mb-4">{useCase.icon}</div>
                       <h4 className="text-h4 text-white">{useCase.title}</h4>
                       <p className="text-body-sm text-gray-300 flex-grow">{useCase.description}</p>
                       <div className="mt-6 pt-4 border-t border-gray-800">
-                        <button className="text-purple-400 hover:text-purple-300 text-sm font-medium flex items-center transition-colors duration-300">
+                        <button className="text-primary hover:text-primary/80 text-sm font-medium flex items-center transition-colors duration-300">
                           Learn more
                           <svg
                             className="ml-2 h-4 w-4"
@@ -353,7 +353,7 @@ const AboutSection = () => {
                 }}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   activeIndex === index
-                    ? "w-8 bg-purple-500"
+                    ? "w-8 bg-primary"
                     : "w-2 bg-gray-700 hover:bg-gray-600"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}

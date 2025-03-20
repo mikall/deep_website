@@ -18,7 +18,7 @@ const InfoBox: React.FC = () => {
                 <span>Expenses</span>
               </div>
               <div className="flex items-center">
-                <div className="w-3 h-3 bg-purple-500 mr-1"></div>
+                <div className="w-3 h-3 bg-primary mr-1"></div>
                 <span>Income</span>
               </div>
             </div>
@@ -28,22 +28,22 @@ const InfoBox: React.FC = () => {
           {/* Bullet points */}
           <div className="space-y-2 text-body-sm">
             <div className="flex items-start">
-              <div className="flex-shrink-0 h-5 w-5 rounded-full bg-purple-900 flex items-center justify-center mr-3 mt-0.5">
-                <div className="h-2 w-2 bg-purple-500 rounded-full animate-ping"></div>
+              <div className="flex-shrink-0 h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5">
+                <div className="h-2 w-2 bg-primary rounded-full animate-ping"></div>
               </div>
               <span className="text-gray-300">Forecast customer financial behaviour day by day using our powerful AI foundation model.</span>
             </div>
             
             <div className="flex items-start">
-              <div className="flex-shrink-0 h-5 w-5 rounded-full bg-purple-900 flex items-center justify-center mr-3 mt-0.5">
-                <div className="h-2 w-2 bg-purple-500 rounded-full animate-ping"></div>
+              <div className="flex-shrink-0 h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5">
+                <div className="h-2 w-2 bg-primary rounded-full animate-ping"></div>
               </div>
               <span className="text-gray-300">Let our AI identify opportunities based on your services or products.</span>
             </div>
             
             <div className="flex items-start">
-              <div className="flex-shrink-0 h-5 w-5 rounded-full bg-purple-900 flex items-center justify-center mr-3 mt-0.5">
-                <div className="h-2 w-2 bg-purple-500 rounded-full animate-ping"></div>
+              <div className="flex-shrink-0 h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5">
+                <div className="h-2 w-2 bg-primary rounded-full animate-ping"></div>
               </div>
               <span className="text-gray-300">Choose your preferred simulation length.</span>
             </div>

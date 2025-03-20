@@ -66,13 +66,13 @@ const RoadmapSection = () => {
       className="py-20 bg-black relative overflow-hidden"
     >
       {/* Background gradient effects */}
-      <div className="absolute top-0 left-1/4 w-1/2 h-1/2 bg-purple-900/20 rounded-full blur-[100px] -z-10"></div>
+      <div className="absolute top-0 left-1/4 w-1/2 h-1/2 bg-primary/20 rounded-full blur-[100px] -z-10"></div>
       <div className="absolute bottom-0 right-1/4 w-1/2 h-1/2 bg-blue-900/20 rounded-full blur-[100px] -z-10"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            <span className="text-purple-500">Roadmap</span>
+            <span className="text-primary">Roadmap</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
             Our journey to revolutionize financial data analysis through AI innovation.
@@ -82,7 +82,7 @@ const RoadmapSection = () => {
         {/* Timeline visualization */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-900 via-purple-600 to-purple-900 rounded-full"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary/30 via-primary to-primary/30 rounded-full"></div>
           
           {/* Timeline steps */}
           <div className="space-y-24 relative">
@@ -99,7 +99,7 @@ const RoadmapSection = () => {
                 {/* Left side (odd steps) */}
                 {index % 2 === 0 && (
                   <div className="w-1/2 pr-12 text-right">
-                    <div className="inline-block px-4 py-1 rounded-full text-xs font-semibold mb-2 bg-purple-900/30 text-purple-400 border border-purple-700">
+                    <div className="inline-block px-4 py-1 rounded-full text-xs font-semibold mb-2 bg-primary/20 text-primary/90 border border-primary/40">
                       {step.date}
                     </div>
                     <h3 className="text-h3 text-white mb-2">{step.title}</h3>
@@ -109,13 +109,13 @@ const RoadmapSection = () => {
                 
                 {/* Center point */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-purple-900/50 border-2 border-purple-500">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/20 border-2 border-primary">
                     {index === 0 ? (
-                      <CheckCircle className="w-6 h-6 text-purple-400" />
+                      <CheckCircle className="w-6 h-6 text-primary" />
                     ) : index === 1 ? (
-                      <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+                      <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
                     ) : (
-                      <Milestone className="w-6 h-6 text-purple-400" />
+                      <Milestone className="w-6 h-6 text-primary" />
                     )}
                   </div>
                 </div>
@@ -123,7 +123,7 @@ const RoadmapSection = () => {
                 {/* Right side (even steps) */}
                 {index % 2 === 1 && (
                   <div className="w-1/2 pl-12">
-                    <div className="inline-block px-4 py-1 rounded-full text-xs font-semibold mb-2 bg-purple-900/30 text-purple-400 border border-purple-700">
+                    <div className="inline-block px-4 py-1 rounded-full text-xs font-semibold mb-2 bg-primary/20 text-primary/90 border border-primary/40">
                       {step.date}
                     </div>
                     <h3 className="text-h3 text-white mb-2">{step.title}</h3>

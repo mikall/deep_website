@@ -34,17 +34,17 @@ const categoryColors: Record<Category, string> = {
   utilities: "bg-gray-700",
   shopping: "bg-gray-800",
   health: "bg-gray-900",
-  income: "bg-purple-500", // Purple for income
+  income: "bg-primary", // Primary theme color for income
 };
 
-// Define color mapping for income amounts (different shades of purple)
+// Define color mapping for income amounts (different shades of primary color)
 const incomeAmountColors = [
-  "bg-purple-300",
-  "bg-purple-400", 
-  "bg-purple-500",
-  "bg-purple-600",
-  "bg-purple-700",
-  "bg-purple-800",
+  "bg-primary/30",
+  "bg-primary/40", 
+  "bg-primary/50",
+  "bg-primary/70",
+  "bg-primary/80",
+  "bg-primary/90",
 ];
 
 // Define period options
@@ -427,10 +427,10 @@ const BankStatementHistogram: React.FC<BankStatementHistogramProps> = ({ onSugge
               {periodOptions.map((option) => (
                 <div key={option.value} className="flex flex-col items-center">
                   <Button
-                    variant={monthRange === option.value ? "default" : "outline"}
+                    variant="default"
                     onClick={() => loadData(option.value)}
                     disabled={loading || animating}
-                    className={`${monthRange === option.value ? "bg-gray-700 hover:bg-gray-600 text-white" : "border-gray-700 text-gray-400 hover:bg-gray-800 hover:text-gray-200"} mb-1 w-24`}
+                    className={`mb-1 w-24 ${monthRange === option.value ? 'bg-primary/80' : 'bg-primary'} hover:bg-primary/60 text-primary-foreground`}
                     size="sm"
                   >
                     {option.label}
@@ -465,7 +465,7 @@ const BankStatementHistogram: React.FC<BankStatementHistogramProps> = ({ onSugge
                       <div className="text-xs mb-1 text-gray-400">{formatDate(date, index)}</div>
                       {renderSquares(date, groupedTransactions[date])}
                       <div className="text-[8px] mt-1" style={{ width: SQUARE_SIZE * 2 }}>
-                        <span className={dailyBalances[date] > 0 ? "text-purple-400" : "text-gray-500"}>
+                        <span className={dailyBalances[date] > 0 ? "text-primary" : "text-gray-500"}>
                           {Math.round(dailyBalances[date])}
                         </span>
                       </div>

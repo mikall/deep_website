@@ -126,7 +126,7 @@ const TeamSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            <span className="text-purple-500">Team</span>
+            <span className="text-primary">Team</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
           A nimble team of researchers, engineers and industry experts united by a shared passion for innovation. We develop predictive AI foundational models enabling the financial world to deliver increasingly superior products to users through our technology.
@@ -154,14 +154,14 @@ const TeamSection = () => {
                       href={member.social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                      className="text-gray-400 hover:text-primary transition-colors duration-300"
                       aria-label={`${member.name}'s LinkedIn`}
                     >
                       <Linkedin size={16} />
                     </a>
                   )}
                 </div>
-                <div className="text-purple-400 text-caption font-medium mb-1">
+                <div className="text-primary/90 text-caption font-medium mb-1">
                   {member.role}
                 </div>
                 <p className="text-gray-300 text-caption">

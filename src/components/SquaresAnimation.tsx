@@ -16,12 +16,13 @@ const MAX_SPACING = 16;          // spazio massimo tra i quadratini
 const GENERATION_INTERVAL = 5000; // intervallo di generazione di nuovi treni (ms)
 const UP_DIRECTION_PROBABILITY = 0.5; // probabilità che un treno si muova verso l'alto (40%)
 
-// Palette di colori
-const PURPLE_COLORS = [
-  "rgba(168, 85, 247, 0.8)",   // purple-500
-  "rgba(192, 132, 252, 0.8)",  // purple-400
-  "rgba(216, 180, 254, 0.7)",  // purple-300
-  "rgba(139, 92, 246, 0.8)",   // purple-600
+// Palette di colori - usando variabili CSS per il colore primario
+const PRIMARY_COLORS = [
+  "var(--primary)",            // colore primario
+  "var(--primary-foreground)", // colore primario foreground
+  "rgba(var(--primary-rgb), 0.8)",  // colore primario con opacità 0.8
+  "rgba(var(--primary-rgb), 0.7)",  // colore primario con opacità 0.7
+  "rgba(var(--primary-rgb), 0.6)",  // colore primario con opacità 0.6
 ];
 
 const GRAY_COLORS = [
@@ -80,8 +81,8 @@ const SquaresAnimation: React.FC<SquaresAnimationProps> = ({
   
   // Funzione per generare un colore casuale
   const getRandomColor = useCallback(() => {
-    const isPurple = Math.random() > 0.4; // 60% probabilità di viola
-    const colorArray = isPurple ? PURPLE_COLORS : GRAY_COLORS;
+    const isPrimary = Math.random() > 0.4; // 60% probabilità di colore primario
+    const colorArray = isPrimary ? PRIMARY_COLORS : GRAY_COLORS;
     return colorArray[Math.floor(Math.random() * colorArray.length)];
   }, []);
   

@@ -20,16 +20,16 @@ const HeroSection = () => {
           {/* Text content */}
           <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h1 className="text-display text-white">
-              <span className="text-purple-500">Predictive</span><br />
-              <span className="text-purple-500">Banking</span> AI
+              <span className="text-primary">Predictive</span><br />
+              <span className="text-primary">Banking</span> AI
             </h1>
             <p className="text-body-lg text-gray-300 mb-8 max-w-lg">
               From data to values in weeks leveraging large transactional models to transform and create foundational forecasting models for the banking world.
             </p>
             <div className="flex flex-wrap gap-2 mb-8">
-              <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm">#Predictive-AI</span>
-              <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm">#NoCodeAI</span>
-              <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm">#FastDecisions</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#Predictive-AI</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#NoCodeAI</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#FastDecisions</span>
             </div>
             <div className="flex flex-wrap gap-4">
               <button 
@@ -39,7 +39,7 @@ const HeroSection = () => {
                     demoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
                 }}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300 border border-purple-700 hover:border-purple-500 shadow-lg hover:shadow-purple-500/20"
+                className="bg-primary hover:bg-primary/80 text-primary-foreground px-6 py-3 rounded-md font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 shadow-lg hover:shadow-primary/20"
               >
                 See the Demo
               </button>
@@ -50,7 +50,7 @@ const HeroSection = () => {
                     aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
                 }}
-                className="bg-transparent text-purple-400 hover:text-purple-300 px-6 py-3 rounded-md font-medium transition-colors duration-300 border border-purple-800 hover:border-purple-600"
+                className="bg-transparent text-primary hover:text-primary/80 px-6 py-3 rounded-md font-medium transition-colors duration-300 border border-primary/40 hover:border-primary/60"
               >
                 Learn More
               </button>
@@ -60,7 +60,7 @@ const HeroSection = () => {
           {/* Visual element */}
           <div className={`transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-purple-400 rounded-lg blur opacity-30 animate-pulse"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/70 rounded-lg blur opacity-30 animate-pulse"></div>
               <div className="relative bg-black border border-gray-800 rounded-lg p-6 shadow-xl">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex space-x-2">
@@ -89,7 +89,7 @@ const HeroSection = () => {
                             className="h-24 w-auto object-contain"
                           />
                           <div className="h-24 w-px bg-gray-700"></div>
-                          <div className="text-purple-500 text-sm font-mono">
+                          <div className="text-primary text-sm font-mono">
                             <div className="mb-1">{'>'} Analyzing banking data...</div>
                             <div className="mb-1">{'>'} Forecasting trends...</div>
                             <div className="flex items-center">
@@ -101,8 +101,8 @@ const HeroSection = () => {
                     </div>
                   </div>
                   <div className="flex justify-between mt-4">
-                    <div className="h-8 w-8 bg-purple-900/50 rounded-full flex items-center justify-center">
-                      <div className="h-2 w-2 bg-purple-500 rounded-full animate-ping"></div>
+                    <div className="h-8 w-8 bg-primary/20 rounded-full flex items-center justify-center">
+                      <div className="h-2 w-2 bg-primary rounded-full animate-ping"></div>
                     </div>
                     <div className="h-4 bg-gray-800 rounded w-1/3"></div>
                   </div>
@@ -116,7 +116,7 @@ const HeroSection = () => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
           <span className="text-gray-500 text-sm mb-2">Scroll to explore</span>
           <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center p-1">
-            <div className="w-1 h-2 bg-purple-500 rounded-full animate-bounce"></div>
+            <div className="w-1 h-2 bg-primary rounded-full animate-bounce"></div>
           </div>
         </div>
       </div>
