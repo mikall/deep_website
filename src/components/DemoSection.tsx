@@ -59,10 +59,10 @@ const DemoSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            See Our Platform <span className="text-purple-500">in Action</span>
+            How Our <span className="text-purple-500">AI Works</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            Play with our online simulation, choose a forecast period of 30, 90, or 180 days to understand how we can help you integrate insights into your processes and products.
+            Our predictive AI analyzes bank statements, forecasting simulations, and financial projections to generate valuable insights and personalized suggestions. This visualization illustrates how we transform financial data into predictive, actionable recommendations for both individuals and institutions.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ const DemoSection = () => {
               <div className="md:col-span-4 lg:col-span-3 mt-6 mb-6 mr-6" style={{ height: "400px" }}>
                 <Card className="bg-black text-gray-200 border-gray-800 h-full">
                   <CardContent className="h-full overflow-hidden flex flex-col p-0">
-                    <h4 className="text-body-sm font-semibold pl-4 pb-2 m-0 border-b border-gray-800">Suggestions</h4>
+                    <h4 className="text-body-sm font-semibold pl-4 pb-2 m-0 border-b border-gray-800">Generated Insights</h4>
                     {animating || visibleSuggestions.length > 0 ? (
                       <div className="flex-grow overflow-hidden h-full">
                         <ul className="space-y-2 pr-2 custom-scrollbar px-4 py-3 h-full overflow-y-auto max-h-full">
@@ -111,12 +111,12 @@ const DemoSection = () => {
                       </div>
                     ) : (
                       <div className="text-center text-gray-500 py-4 px-4 flex-grow">
-                        Select a period to see suggestions
+                        Example insights from financial analysis
                       </div>
                     )}
                     {!animating && visibleSuggestions.length > 0 && (
                       <div className="text-xs text-gray-500 italic px-4 py-2 mt-auto">
-                        Suggestions based on financial activity
+                        AI-generated suggestions based on financial patterns
                       </div>
                     )}
                   </CardContent>

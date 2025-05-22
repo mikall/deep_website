@@ -16,13 +16,15 @@ const Footer = () => {
               Deep4IT
             </Link>
             <p className="text-gray-400 text-body-sm mb-6">
-              Leveraging Foundational AI Predictive Models to transform how businesses make decisions.
+              Empowering financial institutions and individuals with predictive conversational AI agents that deliver personalized insights and guidance.
             </p>
             <div className="flex">
               <a
                 href="https://www.linkedin.com/company/deep4it"
                 className="text-gray-400 hover:text-primary transition-colors duration-300"
                 aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Linkedin size={20} />
               </a>
@@ -31,14 +33,15 @@ const Footer = () => {
 
           {/* Quick links */}
           <div className="col-span-1">
-            <h3 className="text-white font-semibold mb-4 text-h4">Quick Links</h3>
+              <h3 className="text-white font-semibold mb-4 text-h4">Quick Links</h3>
             <ul className="grid grid-cols-2 gap-x-2 gap-y-2 max-w-xs">
               {[
                 { label: "Home", href: "#home" },
                 { label: "Proposition", href: "#about" },
                 { label: "Demo", href: "#demo" },
-                { label: "Awards", href: "#awards" },
+                { label: "Recognition", href: "#awards" },
                 { label: "Team", href: "#team" },
+                { label: "Roadmap", href: "#roadmap" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link

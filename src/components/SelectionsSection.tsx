@@ -92,7 +92,7 @@ const SelectionsSection = () => {
             <span className="text-primary">Recognition</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            Deep4IT has been recognized and selected by leading organizations in the financial and technology sectors.
+            Our innovative approach to predictive and conversational financial AI has been recognized by leading organizations in both the financial and technology sectors.
           </p>
         </div>
 

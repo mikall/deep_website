@@ -20,16 +20,16 @@ const HeroSection = () => {
           {/* Text content */}
           <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h1 className="text-display text-white">
-              <span className="text-primary">Predictive</span><br />
-              <span className="text-primary">Banking</span> AI
+              Predictive<br />
+              <span className="text-primary">Financial AI Agent</span>
             </h1>
             <p className="text-body-lg text-gray-300 mb-8 max-w-lg">
-              From data to values in weeks leveraging large transactional models to transform and create foundational forecasting models for the banking world.
+              Deliver personalized financial coaching and insights through conversational AI—enhancing outcomes for institutions and individuals alike.
             </p>
             <div className="flex flex-wrap gap-2 mb-8">
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#Predictive-AI</span>
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#NoCodeAI</span>
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#FastDecisions</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#PredictiveAnalytics</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#ConversationalAI</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#PersonalizedInsights</span>
             </div>
             <div className="flex flex-wrap gap-4">
               <button 
@@ -75,7 +75,7 @@ const HeroSection = () => {
                     <div className="flex flex-col h-full">
                       {/* Terminal header */}
                       <div className="bg-gray-800 px-3 py-1 text-xs text-gray-400 font-mono">
-                        $ AI.predict(banking_data)
+                        $ AI.agent(financial_data)
                       </div>
                       
                       {/* Terminal content with bank image */}
@@ -83,15 +83,15 @@ const HeroSection = () => {
                         <div className="flex items-center space-x-3">
                           <Image 
                             src="/images/bank.png" 
-                            alt="Banking AI Visualization" 
+                            alt="Financial AI Agent Visualization" 
                             width={96}
                             height={96}
                             className="h-24 w-auto object-contain"
                           />
                           <div className="h-24 w-px bg-gray-700"></div>
                           <div className="text-primary text-sm font-mono">
-                            <div className="mb-1">{'>'} Analyzing banking data...</div>
-                            <div className="mb-1">{'>'} Forecasting trends...</div>
+                            <div className="mb-1">{'>'} Analyzing financial patterns...</div>
+                            <div className="mb-1">{'>'} Generating personalized insights...</div>
                             <div className="flex items-center">
                               {'>'} <span className="ml-1 animate-pulse">_</span>
                             </div>

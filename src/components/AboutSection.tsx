@@ -4,13 +4,10 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { 
   ChevronLeft, 
   ChevronRight, 
-  Tags, 
-  ShoppingCart, 
   UserCheck, 
   Search, 
   Wallet, 
   TrendingUp, 
-  Shield, 
   PiggyBank 
 } from "lucide-react";
 
@@ -26,51 +23,33 @@ interface UseCase {
 const useCases: UseCase[] = [
   {
     id: 1,
-    title: "Transaction Categorisation",
-    description: "Automatically classifying spending into precise categories to provide customers with meaningful insights into their financial behaviour and enable more sophisticated analysis.",
-    icon: <Tags className="w-8 h-8 text-primary" />,
+    title: "Advanced Educational Coaching",
+    description: "Our conversational AI provides personalized financial education, adapting to each individual&apos;s knowledge level and learning style while helping institutions build financially educated customer bases.",
+    icon: <Search className="w-8 h-8 text-primary" />,
   },
   {
     id: 2,
-    title: "Cross-Selling & Upselling",
-    description: "Analysing spending patterns to recommend relevant financial products precisely when customers need them, enhancing conversion rates through timely, personalised offers.",
-    icon: <ShoppingCart className="w-8 h-8 text-primary" />,
+    title: "Advanced Alternative Credit Scoring",
+    description: "Our AI analyzes transaction patterns to create more inclusive credit assessments, helping individuals access financial services while enabling institutions to make better-informed lending decisions.",
+    icon: <TrendingUp className="w-8 h-8 text-primary" />,
   },
   {
     id: 3,
-    title: "Churn Prediction & Retention",
-    description: "Identifying early warning signals of account dormancy or customer dissatisfaction to trigger proactive retention measures before customers consider switching banks.",
+    title: "Customer Insights",
+    description: "Predict customer behaviors like churn probability and identify best next product opportunities, allowing financial institutions to proactively address customer needs with hyper-personalized approaches.",
     icon: <UserCheck className="w-8 h-8 text-primary" />,
   },
   {
     id: 4,
-    title: "Life Event Detection",
-    description: "Recognising spending pattern changes that indicate significant life events (home purchase, marriage, childbirth, retirement) to offer relevant financial solutions at crucial decision points.",
-    icon: <Search className="w-8 h-8 text-primary" />,
+    title: "Smart Savings",
+    description: "Simulate optimal saving strategies based on individual financial patterns, helping people achieve their goals faster while providing financial institutions with deeper engagement opportunities.",
+    icon: <PiggyBank className="w-8 h-8 text-primary" />,
   },
   {
     id: 5,
-    title: "Personal Financial Management",
-    description: "Providing customers with intelligent budgeting assistance, spending categorisation, and personalised savings goals based on their projected financial situation.",
+    title: "Investment Advice",
+    description: "Simulate investment scenarios tailored to each person&apos;s risk profile and financial situation, empowering individuals to make confident decisions and institutions to provide more personalized guidance.",
     icon: <Wallet className="w-8 h-8 text-primary" />,
-  },
-  {
-    id: 6,
-    title: "Enhanced Credit Scoring",
-    description: "Supplementing traditional credit assessment with behavioural spending metrics for more accurate lending decisions while detecting early signs of financial distress before formal delinquency occurs.",
-    icon: <TrendingUp className="w-8 h-8 text-primary" />,
-  },
-  {
-    id: 7,
-    title: "Fraudster Identification",
-    description: "Detecting patterns consistent with fraudulent actors rather than just fraudulent transactions, enabling the bank to proactively identify potentially suspicious customers before multiple fraud attempts occur.",
-    icon: <Shield className="w-8 h-8 text-primary" />,
-  },
-  {
-    id: 8,
-    title: "Investment Intention Forecasting",
-    description: "Predicting when customers are likely to have surplus funds available for investment based on spending and saving behaviours.",
-    icon: <PiggyBank className="w-8 h-8 text-primary" />,
   },
 ];
 
@@ -152,27 +131,27 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            <span className="text-primary">Proposition</span>
+            <span className="text-primary">Our Vision</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            At Deep4IT, we amplify your business capabilities to make smarter decisions and create innovative services by transforming complex transaction data into actionable insights through the power of AI and our pioneering Large Transaction Models (LTMs).
+            At Deep4IT, we envision a future where financial decisions are guided by predictive intelligence, conversational AI, and hyper-personalization. At the core of our technology is our proprietary foundational model—a GPT model trained from scratch specifically on transaction data for financial forecasting. Our predictive AI agent transforms complex financial data into clear, actionable insights tailored to each unique situation—creating a dual impact by empowering individuals with ultra-personalized financial coaching while providing institutions with unprecedented customer understanding and predictive capabilities.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-2 md:order-1">
             <h3 className="text-h3 text-white">
-              Banking-Specific <span className="text-primary">AI Platform</span>
+              Intelligent <span className="text-primary">Financial AI Agent</span>
             </h3>
             <p className="text-body text-gray-300 mb-6">
-              Join the ranks of forward-thinking financial institutions leveraging our banking-specific AI platform to stay ahead in today&apos;s competitive market and unlock the full potential of your customer data.
+              Our predictive conversational AI agent acts as both a hyper-personalized financial coach and a strategic intelligence tool. It interprets individual financial patterns with remarkable precision to deliver predictive insights uniquely tailored to each person&apos;s situation, helping individuals make better decisions and enabling institutions to create deeply personalized customer relationships.
             </p>
             <ul className="space-y-3">
               {[
-                "Foundational model for forecasting customers behaviours",
-                "Where generative and forecast capabilities intersect",
-                "Generative Pretrained Transformer (GPT) with billions of bank transactional data",
-                "Bank-level data security",
+                "Natural conversation that simplifies complex financial concepts",
+                "Hyper-personalized insights based on individual financial DNA",
+                "Adaptive guidance that evolves with each person&apos;s unique financial journey",
+                "Seamless integration with existing financial ecosystems",
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5">
@@ -254,9 +233,9 @@ const AboutSection = () => {
                 
                 {/* Data Insights Section */}
                 <div className="mt-4 h-24 bg-gray-900 rounded border border-gray-800 flex items-center justify-center">
-                  <div className="text-primary text-xs font-mono">
-                    [<span className="text-gray-500">data</span>] <span className="text-white">to</span> <span className="text-green-500">insights</span>
-                  </div>
+                <div className="text-primary text-xs font-mono">
+                  [<span className="text-gray-500">conversations</span>] <span className="text-white">to</span> <span className="text-green-500">actions</span>
+                </div>
                 </div>
               </div>
             </div>
@@ -265,10 +244,10 @@ const AboutSection = () => {
 
         <div className="mb-8 text-center">
           <h3 className="text-h3 text-white">
-            Use <span className="text-primary">Cases</span>
+            Product <span className="text-primary">Modules</span>
           </h3>
           <p className="text-body text-gray-300 max-w-2xl mx-auto">
-            Discover how Deep4IT can revolutionize your decision-making process with our Large Transaction Models.
+            Our AI agent offers multiple forecasting capabilities from simple predictions to interactive simulations and conversational guidance, serving both institutions and individuals.
           </p>
         </div>
 
@@ -317,24 +296,7 @@ const AboutSection = () => {
                       <div className="mb-4">{useCase.icon}</div>
                       <h4 className="text-h4 text-white">{useCase.title}</h4>
                       <p className="text-body-sm text-gray-300 flex-grow">{useCase.description}</p>
-                      <div className="mt-6 pt-4 border-t border-gray-800">
-                        <button className="text-primary hover:text-primary/80 text-sm font-medium flex items-center transition-colors duration-300">
-                          Learn more
-                          <svg
-                            className="ml-2 h-4 w-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            />
-                          </svg>
-                        </button>
-                      </div>
+                      {/* Removed "Learn more" button as requested */}
                     </div>
                   </div>
                 </div>

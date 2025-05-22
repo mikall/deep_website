@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { Milestone, CheckCircle } from "lucide-react";
 
 // Define roadmap step type
 interface RoadmapStep {
@@ -16,19 +15,19 @@ const roadmapSteps: RoadmapStep[] = [
   {
     id: 1,
     title: "Research & Development",
-    description: "Collaborated with university research teams and professors to develop our core technology. Established our dedicated research team and conducted extensive research and agreements to gather the necessary data for training our models. Successfully joined a deeptech accelerator programme to further enhance our growth trajectory.",
+    description: "Collaborated with university research teams to develop our predictive conversational AI technology. Established our dedicated research team and gathered diverse financial data to train our models. Successfully joined a deeptech accelerator to enhance our development of predictive AI agents that understand and anticipate financial patterns.",
     date: "H2 2024"
   },
   {
     id: 2,
-    title: "Market Exploration",
-    description: "Engaging with banks, financial institutions, and various fintech companies to refine our offering. Focused on securing Letters of Intent (LOIs) and Proof of Concept (POC) agreements. During this period, we will raise capital and improve our product based on real market experience and feedback.",
-    date: "2025"
+    title: "Market Fit Research & POC",
+    description: "Engaging with financial institutions while also developing direct-to-consumer applications. Our dual approach focuses on both B2B and B2B2C markets, refining our AI agent to deliver value across these channels, securing partnerships and gathering user feedback to continuously improve our conversational capabilities.",
+    date: "H1 2025"
   },
   {
     id: 3,
-    title: "Bimodal AI & Market Expansion",
-    description: "Launch of our advanced bimodal forecasting and LLM model capable of analysing bank statements and providing tailored financial suggestions in a single, unified system. Beginning strategic market expansion to reach a broader customer base.",
+    title: "Predictive Conversational Finance Platform",
+    description: "Launch of our comprehensive predictive financial AI agent platform that serves both institutions and individuals. Our agent will provide personalized financial coaching, actionable insights, and seamless integration with existing financial systems, creating a new paradigm in financial guidance.",
     date: "H1 2026"
   }
 ];
@@ -75,7 +74,7 @@ const RoadmapSection = () => {
             <span className="text-primary">Roadmap</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            Our journey to revolutionize financial data analysis through AI innovation.
+            Our journey to transform financial decision-making through conversational AI for both institutions and individuals.
           </p>
         </div>
 
@@ -89,7 +88,7 @@ const RoadmapSection = () => {
             {roadmapSteps.map((step, index) => (
               <div 
                 key={step.id}
-                className={`flex items-center transition-all duration-1000 ${
+                className={`relative flex items-center transition-all duration-1000 ${
                   isInView 
                     ? "opacity-100" 
                     : "opacity-0"
@@ -108,16 +107,8 @@ const RoadmapSection = () => {
                 )}
                 
                 {/* Center point */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/20 border-2 border-primary">
-                    {index === 0 ? (
-                      <CheckCircle className="w-6 h-6 text-primary" />
-                    ) : index === 1 ? (
-                      <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                    ) : (
-                      <Milestone className="w-6 h-6 text-primary" />
-                    )}
-                  </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center bg-primary/20 border-2 border-primary">
+                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
                 </div>
                 
                 {/* Right side (even steps) */}

@@ -22,7 +22,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 1,
     name: "Alessandro De Vitis",
-    role: "CEO & CO-FOUNDER",
+    role: "CEO & Co-founder",
     bio: "Exec MBA / Entrepreneur",
     image: "👨‍💼",
     social: {
@@ -42,7 +42,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 3,
     name: "Michele Alletto",
-    role: "CTO & CO-FOUNDER",
+    role: "CTO & Co-founder",
     bio: "Exec MBA | 2x M.Eng",
     image: "👨‍💻",
     social: {
@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 4,
     name: "Lorenzo Borgatti",
-    role: "Chief AI & CO-FOUNDER",
+    role: "Chief AI & Co-founder",
     bio: "M.Phys",
     image: "👨‍🔬",
     social: {
@@ -62,7 +62,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 5,
     name: "Giovanni Tuccitto",
-    role: "COO & CO-FOUNDER",
+    role: "COO & Co-founder",
     bio: "Exec MBA | M.Eng.",
     image: "👨‍💼",
     social: {
@@ -82,7 +82,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 7,
     name: "Antonio Ghezzi",
-    role: "ADVISOR",
+    role: "Advisor",
     bio: "Phd, Prof., Polytechnic University of Milan",
     image: "👨‍🎓",
     social: {
@@ -129,7 +129,7 @@ const TeamSection = () => {
             <span className="text-primary">Team</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-          A nimble team of researchers, engineers and industry experts united by a shared passion for innovation. We develop predictive AI foundational models enabling the financial world to deliver increasingly superior products to users through our technology.
+          A passionate team of researchers, engineers, and industry experts united by a vision to transform financial guidance. We develop conversational AI agents that empower both financial institutions and individuals with personalized insights and coaching.
           </p>
         </div>
 
