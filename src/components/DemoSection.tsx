@@ -59,15 +59,15 @@ const DemoSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            How Our <span className="text-purple-500">AI Works</span>
+            Come Funziona il Nostro <span className="text-primary">Motore di Previsione Comportamentale</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            Our predictive AI analyzes bank statements, forecasting simulations, and financial projections to generate valuable insights and personalized suggestions. This visualization illustrates how we transform financial data into predictive, actionable recommendations for both individuals and institutions.
+            Il nostro motore di behavioral forecasting analizza i pattern delle transazioni finanziarie per prevedere comportamenti futuri. Questa simulazione mostra come trasformiamo i dati transazionali in previsioni comportamentali precise, identificando tendenze di spesa, probabilità di churn e opportunità di next best action.
           </p>
         </div>
 
         <div className="relative">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-purple-400 rounded-lg blur opacity-30 animate-pulse"></div>
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/70 rounded-lg blur opacity-30 animate-pulse"></div>
           <div className="relative bg-black border border-gray-800 rounded-lg pl-6 shadow-xl">
             {/* Main content grid */}
             
@@ -86,7 +86,7 @@ const DemoSection = () => {
               <div className="md:col-span-4 lg:col-span-3 mt-6 mb-6 mr-6" style={{ height: "400px" }}>
                 <Card className="bg-black text-gray-200 border-gray-800 h-full">
                   <CardContent className="h-full overflow-hidden flex flex-col p-0">
-                    <h4 className="text-body-sm font-semibold pl-4 pb-2 m-0 border-b border-gray-800">Generated Insights</h4>
+                    <h4 className="text-body-sm font-semibold pl-4 pb-2 m-0 border-b border-gray-800">Previsioni Comportamentali</h4>
                     {animating || visibleSuggestions.length > 0 ? (
                       <div className="flex-grow overflow-hidden h-full">
                         <ul className="space-y-2 pr-2 custom-scrollbar px-4 py-3 h-full overflow-y-auto max-h-full">
@@ -111,12 +111,12 @@ const DemoSection = () => {
                       </div>
                     ) : (
                       <div className="text-center text-gray-500 py-4 px-4 flex-grow">
-                        Example insights from financial analysis
+                        Esempi di previsioni comportamentali
                       </div>
                     )}
                     {!animating && visibleSuggestions.length > 0 && (
                       <div className="text-xs text-gray-500 italic px-4 py-2 mt-auto">
-                        AI-generated suggestions based on financial patterns
+                        Previsioni comportamentali basate su pattern transazionali
                       </div>
                     )}
                   </CardContent>

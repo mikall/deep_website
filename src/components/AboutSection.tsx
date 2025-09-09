@@ -8,7 +8,13 @@ import {
   Search, 
   Wallet, 
   TrendingUp, 
-  PiggyBank 
+  PiggyBank,
+  GraduationCap,
+  GitCompare,
+  Settings,
+  Database,
+  Cpu,
+  Users
 } from "lucide-react";
 
 // Define the use case type
@@ -23,33 +29,39 @@ interface UseCase {
 const useCases: UseCase[] = [
   {
     id: 1,
-    title: "Advanced Educational Coaching",
-    description: "Our conversational AI provides personalized financial education, adapting to each individual&apos;s knowledge level and learning style while helping institutions build financially educated customer bases.",
-    icon: <Search className="w-8 h-8 text-primary" />,
+    title: "Insegna",
+    description: "Il nostro agente su WhatsApp fornisce educazione finanziaria personalizzata. Con il 65% degli italiani che non comprende concetti finanziari elementari, rendiamo la finanza accessibile attraverso conversazioni naturali.",
+    icon: <GraduationCap className="w-8 h-8 text-primary" />,
   },
   {
     id: 2,
-    title: "Advanced Alternative Credit Scoring",
-    description: "Our AI analyzes transaction patterns to create more inclusive credit assessments, helping individuals access financial services while enabling institutions to make better-informed lending decisions.",
-    icon: <TrendingUp className="w-8 h-8 text-primary" />,
+    title: "Confronta",
+    description: "Analizziamo prodotti finanziari in tempo reale, aiutando gli utenti a trovare le migliori soluzioni per le loro esigenze attraverso il canale più usato in Italia: WhatsApp (90% della popolazione).",
+    icon: <GitCompare className="w-8 h-8 text-primary" />,
   },
   {
     id: 3,
-    title: "Customer Insights",
-    description: "Predict customer behaviors like churn probability and identify best next product opportunities, allowing financial institutions to proactively address customer needs with hyper-personalized approaches.",
-    icon: <UserCheck className="w-8 h-8 text-primary" />,
+    title: "Gestisce",
+    description: "Assistiamo nella gestione quotidiana delle finanze personali, dall'analisi delle spese al controllo dei budget, fino alla pianificazione degli investimenti.",
+    icon: <Settings className="w-8 h-8 text-primary" />,
   },
   {
     id: 4,
-    title: "Smart Savings",
-    description: "Simulate optimal saving strategies based on individual financial patterns, helping people achieve their goals faster while providing financial institutions with deeper engagement opportunities.",
-    icon: <PiggyBank className="w-8 h-8 text-primary" />,
+    title: "Data Services",
+    description: "Behavior Analytics, Market Insights, Media Services/ADV, Trend Forecasting e Custom Search per offrire alle banche intelligence di mercato avanzata.",
+    icon: <Database className="w-8 h-8 text-primary" />,
   },
   {
     id: 5,
-    title: "Investment Advice",
-    description: "Simulate investment scenarios tailored to each person&apos;s risk profile and financial situation, empowering individuals to make confident decisions and institutions to provide more personalized guidance.",
-    icon: <Wallet className="w-8 h-8 text-primary" />,
+    title: "Technology Services",
+    description: "White-label Conversational AI e modelli predittivi avanzati inclusi i nostri algoritmi di Behavioural Forecasting per churn prediction, next best action e pattern comportamentali.",
+    icon: <Cpu className="w-8 h-8 text-primary" />,
+  },
+  {
+    id: 6,
+    title: "Advisory Services",
+    description: "Portfolio Optimization, Competitive Positioning ed Education Program Design per istituti finanziari basati sui nostri insights.",
+    icon: <Users className="w-8 h-8 text-primary" />,
   },
 ];
 
@@ -131,27 +143,27 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            <span className="text-primary">Our Vision</span>
+            <span className="text-primary">La Nostra Visione</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            At Deep4IT, we envision a future where financial decisions are guided by predictive intelligence, conversational AI, and hyper-personalization. At the core of our technology is our proprietary foundational model—a GPT model trained from scratch specifically on transaction data for financial forecasting. Our predictive AI agent transforms complex financial data into clear, actionable insights tailored to each unique situation—creating a dual impact by empowering individuals with ultra-personalized financial coaching while providing institutions with unprecedented customer understanding and predictive capabilities.
+            Deep4IT sviluppa la tecnologia più evoluta ed avanzata in Italia per il behavioural forecasting a partire da dati finanziari. Abbiamo di recente lanciato SoldoGPT, il nostro agente finanziario personale su WhatsApp che educa, confronta e gestisce le finanze degli utenti. SoldoGPT serve sia consumatori individuali che aziende per il welfare dei dipendenti, e le competenze sviluppate nel prodotto consumer arricchiscono la nostra capacità di innovazione nell'intelligence B2B.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-2 md:order-1">
             <h3 className="text-h3 text-white">
-              Intelligent <span className="text-primary">Financial AI Agent</span>
+              Agente AI <span className="text-primary">Finanziario Intelligente</span>
             </h3>
             <p className="text-body text-gray-300 mb-6">
-              Our predictive conversational AI agent acts as both a hyper-personalized financial coach and a strategic intelligence tool. It interprets individual financial patterns with remarkable precision to deliver predictive insights uniquely tailored to each person&apos;s situation, helping individuals make better decisions and enabling institutions to create deeply personalized customer relationships.
+              Il nostro agente AI conversazionale predittivo agisce sia come coach finanziario iper-personalizzato che come strumento di intelligence strategica. Interpreta i pattern finanziari individuali con notevole precisione per fornire insights predittivi su misura per ogni situazione specifica, aiutando i singoli a prendere decisioni migliori e permettendo alle istituzioni di creare relazioni con i clienti profondamente personalizzate.
             </p>
             <ul className="space-y-3">
               {[
-                "Natural conversation that simplifies complex financial concepts",
-                "Hyper-personalized insights based on individual financial DNA",
-                "Adaptive guidance that evolves with each person&apos;s unique financial journey",
-                "Seamless integration with existing financial ecosystems",
+                "Conversazioni naturali che semplificano concetti finanziari complessi",
+                "Insights iper-personalizzati basati sul DNA finanziario individuale",
+                "Guida adattiva che evolve con il percorso finanziario unico di ogni persona",
+                "Integrazione senza soluzione di continuità con gli ecosistemi finanziari esistenti",
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5">
@@ -244,10 +256,10 @@ const AboutSection = () => {
 
         <div className="mb-8 text-center">
           <h3 className="text-h3 text-white">
-            Product <span className="text-primary">Modules</span>
+            Il nostro <span className="text-primary">Ecosistema</span>
           </h3>
           <p className="text-body text-gray-300 max-w-2xl mx-auto">
-            Our AI agent offers multiple forecasting capabilities from simple predictions to interactive simulations and conversational guidance, serving both institutions and individuals.
+            SoldoGPT fornisce supporto finanziario personale mentre le competenze sviluppate alimentano il nostro Co-Innovation Lab B2B.
           </p>
         </div>
 

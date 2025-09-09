@@ -20,16 +20,16 @@ const HeroSection = () => {
           {/* Text content */}
           <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h1 className="text-display text-white">
-              Predictive<br />
-              <span className="text-primary">Financial AI Agent</span>
+              Agente AI<br />
+              <span className="text-primary">Finanziario Predittivo</span>
             </h1>
             <p className="text-body-lg text-gray-300 mb-8 max-w-lg">
-              Deliver personalized financial coaching and insights through conversational AI—enhancing outcomes for institutions and individuals alike.
+              Forniamo coaching finanziario personalizzato e insights attraverso modelli generativi e predittivi—migliorando i risultati sia per le istituzioni che per i singoli individui.
             </p>
             <div className="flex flex-wrap gap-2 mb-8">
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#PredictiveAnalytics</span>
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#ConversationalAI</span>
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#PersonalizedInsights</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#AnalisiPredittiva</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#AIConversazionale</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#InsightPersonalizzati</span>
             </div>
             <div className="flex flex-wrap gap-4">
               <button 
@@ -41,7 +41,7 @@ const HeroSection = () => {
                 }}
                 className="bg-primary hover:bg-primary/80 text-primary-foreground px-6 py-3 rounded-md font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 shadow-lg hover:shadow-primary/20"
               >
-                See the Demo
+                Vedi la Demo
               </button>
               <button 
                 onClick={() => {
@@ -52,7 +52,7 @@ const HeroSection = () => {
                 }}
                 className="bg-transparent text-primary hover:text-primary/80 px-6 py-3 rounded-md font-medium transition-colors duration-300 border border-primary/40 hover:border-primary/60"
               >
-                Learn More
+                Scopri di più
               </button>
             </div>
           </div>
@@ -114,7 +114,7 @@ const HeroSection = () => {
         
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-          <span className="text-gray-500 text-sm mb-2">Scroll to explore</span>
+          <span className="text-gray-500 text-sm mb-2">Scorri per esplorare</span>
           <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center p-1">
             <div className="w-1 h-2 bg-primary rounded-full animate-bounce"></div>
           </div>

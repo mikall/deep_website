@@ -66,12 +66,12 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block h-full">
-            <div className="ml-10 flex items-center space-x-8 h-full">
+          <div className="hidden md:flex items-center justify-center flex-1 h-full">
+            <div className="flex items-center space-x-8 h-full">
               <NavLink href="#home" label="Home" />
-              <NavLink href="#about" label="Proposition" />
+              <NavLink href="#about" label="Vision" />
               <NavLink href="#demo" label="Demo" />
-              <NavLink href="#selections" label="Recognition" />
+              <NavLink href="#selections" label="Riconoscimenti" />
               <NavLink href="#team" label="Team" />
               <NavLink href="#roadmap" label="Roadmap" />
               <Link 
@@ -91,7 +91,7 @@ const Navbar = () => {
                   }
                 }}
               >
-                Contact Us
+                Contatti
               </Link>
             </div>
           </div>
@@ -103,7 +103,7 @@ const Navbar = () => {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none"
               aria-expanded="false"
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">Apri menu principale</span>
               {isOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
@@ -124,9 +124,9 @@ const Navbar = () => {
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-md">
           <MobileNavLink href="#home" label="Home" onClick={handleNavigation} />
-          <MobileNavLink href="#about" label="Proposition" onClick={handleNavigation} />
+          <MobileNavLink href="#about" label="Vision" onClick={handleNavigation} />
           <MobileNavLink href="#demo" label="Demo" onClick={handleNavigation} />
-          <MobileNavLink href="#selections" label="Recognition" onClick={handleNavigation} />
+          <MobileNavLink href="#selections" label="Riconoscimenti" onClick={handleNavigation} />
           <MobileNavLink href="#team" label="Team" onClick={handleNavigation} />
           <MobileNavLink href="#roadmap" label="Roadmap" onClick={handleNavigation} />
           <div className="pt-4 pb-2">

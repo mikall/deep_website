@@ -14,21 +14,27 @@ interface RoadmapStep {
 const roadmapSteps: RoadmapStep[] = [
   {
     id: 1,
-    title: "Research & Development",
-    description: "Collaborated with university research teams to develop our predictive conversational AI technology. Established our dedicated research team and gathered diverse financial data to train our models. Successfully joined a deeptech accelerator to enhance our development of predictive AI agents that understand and anticipate financial patterns.",
-    date: "H2 2024"
+    title: "Ricerca e Fattibilità Tecnica",
+    description: "Collaborazione con team di ricerca universitari per sviluppare la tecnologia di behavioral forecasting. Validazione della fattibilità tecnica e delle tecnologie abilitanti. Partecipazione a acceleratori deeptech per rafforzare la ricerca sui modelli predittivi comportamentali.",
+    date: "Q4 2024"
   },
   {
     id: 2,
-    title: "Market Fit Research & POC",
-    description: "Engaging with financial institutions while also developing direct-to-consumer applications. Our dual approach focuses on both B2B and B2B2C markets, refining our AI agent to deliver value across these channels, securing partnerships and gathering user feedback to continuously improve our conversational capabilities.",
-    date: "H1 2025"
+    title: "Problem-Solution Validation",
+    description: "Validazione della fattibilità di mercato attraverso diversi MVP. Esplorazione di modelli e insights che non richiedono integrazione tecnica complessa. Creazione del Co-Innovation Lab per sperimentare l'utilizzo dei dati comportamentali.",
+    date: "Q1-Q2 2025"
   },
   {
     id: 3,
-    title: "Predictive Conversational Finance Platform",
-    description: "Launch of our comprehensive predictive financial AI agent platform that serves both institutions and individuals. Our agent will provide personalized financial coaching, actionable insights, and seamless integration with existing financial systems, creating a new paradigm in financial guidance.",
-    date: "H1 2026"
+    title: "Building & Testing SoldoGPT",
+    description: "Q3: Sviluppo di SoldoGPT, l'agente finanziario su WhatsApp per educazione, confronto e gestione delle finanze personali. Q4: Testing intensivo con utenti per validare e migliorare i modelli di behavioral forecasting.",
+    date: "Q3-Q4 2025"
+  },
+  {
+    id: 4,
+    title: "Scaling & Miglioramento",
+    description: "Scaling di SoldoGPT per raccogliere dati comportamentali su larga scala. Potenziamento dei servizi Deep4IT B2B basati sui pattern identificati. Espansione delle funzionalità e miglioramento continuo dei modelli predittivi.",
+    date: "2026+"
   }
 ];
 
@@ -74,7 +80,7 @@ const RoadmapSection = () => {
             <span className="text-primary">Roadmap</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            Our journey to transform financial decision-making through conversational AI for both institutions and individuals.
+            Il nostro percorso per trasformare le decisioni finanziarie attraverso il behavioral forecasting e SoldoGPT.
           </p>
         </div>
 

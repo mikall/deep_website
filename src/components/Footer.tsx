@@ -16,7 +16,7 @@ const Footer = () => {
               Deep4IT
             </Link>
             <p className="text-gray-400 text-body-sm mb-6">
-              Empowering financial institutions and individuals with predictive conversational AI agents that deliver personalized insights and guidance.
+              Potenziamo istituzioni finanziarie e individui con la tecnologia più avanzata di behavioral forecasting per insights e guidance personalizzati.
             </p>
             <div className="flex">
               <a
@@ -33,13 +33,13 @@ const Footer = () => {
 
           {/* Quick links */}
           <div className="col-span-1">
-              <h3 className="text-white font-semibold mb-4 text-h4">Quick Links</h3>
+              <h3 className="text-white font-semibold mb-4 text-h4">Link Rapidi</h3>
             <ul className="grid grid-cols-2 gap-x-2 gap-y-2 max-w-xs">
               {[
                 { label: "Home", href: "#home" },
-                { label: "Proposition", href: "#about" },
+                { label: "Vision", href: "#about" },
                 { label: "Demo", href: "#demo" },
-                { label: "Recognition", href: "#awards" },
+                { label: "Riconoscimenti", href: "#selections" },
                 { label: "Team", href: "#team" },
                 { label: "Roadmap", href: "#roadmap" },
               ].map((link) => (
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div id="contact" className="col-span-1">
-            <h3 className="text-white font-semibold mb-4 text-h4">Contact</h3>
+            <h3 className="text-white font-semibold mb-4 text-h4">Contatti</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={18} className="text-primary mr-2 mt-0.5 flex-shrink-0" />
@@ -81,7 +81,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-body-sm mb-4 md:mb-0">
-            &copy; {currentYear} Deep4It srl. All rights reserved. | Share capital: € 70.000,00 | VAT: 13477300969
+            &copy; {currentYear} Deep4It srl. Tutti i diritti riservati. | Capitale sociale: € 70.000,00 | P.IVA: 13477300969
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <span className="text-gray-500 text-caption px-2 py-1 bg-gray-900 rounded-full flex items-center h-7">

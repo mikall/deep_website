@@ -1,0 +1,53 @@
+PROBLEMA
+Gli istituti finanziari non hanno più il
+tempo di parlare con i loro clienti.
+✓ Il 65% degli italiani non comprende concetti finanziari elementari.
+✓ 50% dei clienti non riceve un supporto adeguato dalla sua banca, e la
+fiducia verso gli operatori è bassa (54%).
+✓ La gestione delle proprie finanze - impara, confronta, gestisci - è oggi
+molto frammentata.
+
+SOLUZIONE
+Un agente finanziario
+Personale su WhatsApp
+Circa il 90% della
+popolazione italiana usa
+WhatsApp.
+Il principale caso d'uso
+della Gen AI nel 2025 è :
+"Personal and
+Professional Support".
+COSA FA?
+➢ Insegna
+➢ Confronta
+➢ Gestisce
+
+BUSINESS MODEL
+VERSIONE GRATUITA B2C da cui estraiamo dati per un business B2B co/innovation lab dove forniamo insight, advertising, modelli AI
+e servizi alle banche. IN particolare con il coInnovation lab facciamo:
+DATA
+SERVICES
+▪ Behavior Analytics
+▪ Market Insights
+▪ Media Services/ADV
+▪ Trend Forecasting
+▪ Custom Search
+ADVISORY
+SERVICES
+▪ Portfolio
+Optimization
+▪ Competitive
+Positioning
+▪ Education Program
+Design
+TECHNOLOGY
+SERVICES
+▪ White-label
+Conversational AI
+▪ AI Forecasting
+▪ Churn AI models
+▪ Next Best Action AI
+models
+Attraverso il nostro dataset unico di conversazioni e transazioni,
+basato sui dati aggregati dei piani gratuiti.
+Versione PRO B2B dove oltre a fornire abbonamenti ad utenti fornitamo anche alle aziende la possibilità di sponsorizzare le sottoscrizioni PRO per i loro dipendenti. Le aziende in questo modo accedono alla nostra piattaforma Welfare dove oltre a poter caricare in una RAG documenti aziedali, hanno anche la possibilità di vedere un cruscotto di sentiment per la componente di compensation e benefits.

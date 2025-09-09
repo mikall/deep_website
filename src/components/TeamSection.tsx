@@ -22,7 +22,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 1,
     name: "Alessandro De Vitis",
-    role: "CEO & Co-founder",
+    role: "CEO & Co-fondatore",
     bio: "Exec MBA / Entrepreneur",
     image: "👨‍💼",
     social: {
@@ -32,7 +32,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 2,
     name: "Ilaria Erba",
-    role: "Head of Research",
+    role: "Responsabile Ricerca",
     bio: "Phd ML",
     image: "👩‍🔬",
     social: {
@@ -42,7 +42,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 3,
     name: "Michele Alletto",
-    role: "CTO & Co-founder",
+    role: "CTO & Co-fondatore",
     bio: "Exec MBA | 2x M.Eng",
     image: "👨‍💻",
     social: {
@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 4,
     name: "Lorenzo Borgatti",
-    role: "Chief AI & Co-founder",
+    role: "Chief AI & Co-fondatore",
     bio: "M.Phys",
     image: "👨‍🔬",
     social: {
@@ -62,7 +62,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 5,
     name: "Giovanni Tuccitto",
-    role: "COO & Co-founder",
+    role: "COO & Co-fondatore",
     bio: "Exec MBA | M.Eng.",
     image: "👨‍💼",
     social: {
@@ -72,7 +72,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 6,
     name: "Maksim Beliakov",
-    role: "ML Researcher",
+    role: "Ricercatore ML",
     bio: "M.Sc. Computer Science",
     image: "👨‍💻",
     social: {
@@ -82,7 +82,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 7,
     name: "Antonio Ghezzi",
-    role: "Advisor",
+    role: "Consulente",
     bio: "Phd, Prof., Polytechnic University of Milan",
     image: "👨‍🎓",
     social: {
@@ -126,10 +126,10 @@ const TeamSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            <span className="text-primary">Team</span>
+            <span className="text-primary">Il Nostro Team</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-          A passionate team of researchers, engineers, and industry experts united by a vision to transform financial guidance. We develop conversational AI agents that empower both financial institutions and individuals with personalized insights and coaching.
+          Un team appassionato di ricercatori, ingegneri ed esperti del settore uniti dalla visione di trasformare la consulenza finanziaria. Sviluppiamo agenti AI che potenziano istituzioni finanziarie e individui con insights personalizzati e behavioral forecasting.
           </p>
         </div>
 

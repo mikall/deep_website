@@ -49,9 +49,9 @@ const incomeAmountColors = [
 
 // Define period options
 const periodOptions = [
-  { value: "1", label: "30 Days", forecast: "1 month forecast" },
-  { value: "3", label: "90 Days", forecast: "3 months forecast" },
-  { value: "6", label: "180 Days", forecast: "6 months forecast" },
+  { value: "1", label: "30 Giorni", forecast: "Previsione 1 mese" },
+  { value: "3", label: "90 Giorni", forecast: "Previsione 3 mesi" },
+  { value: "6", label: "180 Giorni", forecast: "Previsione 6 mesi" },
 ];
 
 // Square size in pixels
@@ -420,9 +420,9 @@ const BankStatementHistogram: React.FC<BankStatementHistogramProps> = ({ onSugge
     <Card className="w-full bg-black text-gray-200 border-gray-800">
       <CardHeader className="pb-2">
         <CardTitle className="flex flex-col md:flex-row gap-4">
-          <span className="text-body-sm font-semibold">Statement Forecast</span>
+          <span className="text-body-sm font-semibold">Previsione Comportamentale</span>
           <div className="flex flex-col items-center w-full md:w-auto">
-            <div className="text-xs text-gray-400 mb-2">Select forecast period</div>
+            <div className="text-xs text-gray-400 mb-2">Seleziona periodo di previsione</div>
             <div className="flex flex-wrap justify-center gap-2">
               {periodOptions.map((option) => (
                 <div key={option.value} className="flex flex-col items-center">
@@ -474,7 +474,7 @@ const BankStatementHistogram: React.FC<BankStatementHistogramProps> = ({ onSugge
                 </div>
               ) : (
                 <div className="text-center text-gray-500">
-                  No data available
+                  Nessun dato disponibile
                 </div>
               )}
             </div>

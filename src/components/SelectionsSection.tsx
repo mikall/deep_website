@@ -21,7 +21,7 @@ const selections: Selection[] = [
     title: "Startup Contest",
     organization: "A Tata Communication Company",
     year: "2024",
-    description: "Kaleyra Award for High Potential Communication Channel.",
+    description: "Premio Kaleyra per Canale di Comunicazione ad Alto Potenziale.",
     logoSrc: "/images/kaleyra.avif",
     logoAlt: "Kaleyra Logo"
   },
@@ -30,27 +30,27 @@ const selections: Selection[] = [
     title: "Special Grant",
     organization: "Officine Innovazione",
     year: "2025",
-    description: "Awarded with a unique special grant among more than 200 startups in Italy.",
+    description: "Assegnato un grant speciale unico tra più di 200 startup in Italia.",
     logoSrc: "/images/deloitte.png",
     logoAlt: "Deloitte Logo"
   },
   {
     id: 1,
-    title: "Selected for the acceleration program",
-    organization: "Zest & CDP",
+    title: "Programma di accelerazione",
+    organization: "PoliHub",
     year: "2025",
-    description: "Selected for Italy's premier fintech accelerator, backed by Zest VC and CDP.",
-    logoSrc: "/images/fintech.png",
-    logoAlt: "Fintech District Logo"
+    description: "Acceleratore deeptech del Politecnico di Milano, cohort 2025.",
+    logoSrc: "/images/polihub.webp",
+    logoAlt: "PoliHub Logo"
   },
   {
     id: 4,
-    title: "Selected for the acceleration program",
-    organization: "PoliHub",
+    title: "Programma di innovazione",
+    organization: "Le Village",
     year: "2025",
-    description: "Selected for PoliHub, Politecnico di Milano's premier deeptech accelerator, 2025 cohort.",
-    logoSrc: "/images/polihub.webp",
-    logoAlt: "PoliHub Logo"
+    description: "Ammessi al network internazionale di innovazione di Credit Agricole.",
+    logoSrc: "/images/levillage.png",
+    logoAlt: "Le Village by Credit Agricole Logo"
   },
 ];
 
@@ -89,10 +89,10 @@ const SelectionsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            <span className="text-primary">Recognition</span>
+            <span className="text-primary">Riconoscimenti</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            Our innovative approach to predictive and conversational financial AI has been recognized by leading organizations in both the financial and technology sectors.
+            Il nostro approccio innovativo al behavioral forecasting finanziario è stato riconosciuto da organizzazioni leader nei settori finanziario e tecnologico.
           </p>
         </div>
 
@@ -113,8 +113,8 @@ const SelectionsSection = () => {
                     <Image 
                       src={selection.logoSrc} 
                       alt={selection.logoAlt}
-                      width={100}
-                      height={50}
+                      width={selection.organization === "Le Village" ? 80 : 100}
+                      height={selection.organization === "Le Village" ? 40 : 50}
                       style={{ objectFit: 'contain' }}
                     />
                   </div>
