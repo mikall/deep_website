@@ -4,11 +4,6 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { 
   ChevronLeft, 
   ChevronRight, 
-  UserCheck, 
-  Search, 
-  Wallet, 
-  TrendingUp, 
-  PiggyBank,
   GraduationCap,
   GitCompare,
   Settings,
@@ -42,7 +37,7 @@ const useCases: UseCase[] = [
   {
     id: 3,
     title: "Gestisce",
-    description: "Assistiamo nella gestione quotidiana delle finanze personali, dall'analisi delle spese al controllo dei budget, fino alla pianificazione degli investimenti.",
+    description: "Assistiamo nella gestione quotidiana delle finanze personali, dall&apos;analisi delle spese al controllo dei budget, fino alla pianificazione degli investimenti.",
     icon: <Settings className="w-8 h-8 text-primary" />,
   },
   {
@@ -146,7 +141,7 @@ const AboutSection = () => {
             <span className="text-primary">La Nostra Visione</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            Deep4IT sviluppa la tecnologia più evoluta ed avanzata in Italia per il behavioural forecasting a partire da dati finanziari. Abbiamo di recente lanciato SoldoGPT, il nostro agente finanziario personale su WhatsApp che educa, confronta e gestisce le finanze degli utenti. SoldoGPT serve sia consumatori individuali che aziende per il welfare dei dipendenti, e le competenze sviluppate nel prodotto consumer arricchiscono la nostra capacità di innovazione nell'intelligence B2B.
+            Deep4IT sviluppa la tecnologia più evoluta ed avanzata in Italia per il behavioural forecasting a partire da dati finanziari. Abbiamo di recente lanciato SoldoGPT, il nostro agente finanziario personale su WhatsApp che educa, confronta e gestisce le finanze degli utenti. SoldoGPT serve sia consumatori individuali che aziende per il welfare dei dipendenti, e le competenze sviluppate nel prodotto consumer arricchiscono la nostra capacità di innovazione nell&apos;intelligence B2B.
           </p>
         </div>
 
