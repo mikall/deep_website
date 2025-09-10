@@ -4,25 +4,38 @@ PITCH DECK DEEP4IT - 10 MINUTI PER BANCHE
 🎯 HOOK OPENING (1 min)
 "Il 65% dei clienti delle banche italiane non comprende concetti finanziari elementari. 
 Allo stesso tempo, le banche faticano a prevedere il comportamento dei propri clienti.
-E se vi dicessi che abbiamo trovato un modo per risolvere entrambi i problemi... 
-generando dati comportamentali unici che nessun competitor può replicare?"
+Abbiamo sviluppato una soluzione che risolve entrambi i problemi simultaneamente, 
+generando dati comportamentali unici che nessun competitor può replicare."
 
 🔍 IL PROBLEMA CHE RISOLVIAMO (1.5 min)
-• Le banche perdono clienti perché non sanno QUANDO intervenire
-• 70% delle azioni di customer retention arrivano troppo tardi
-• I modelli predittivi attuali si basano su dati storici limitati
-• Manca la comprensione dei pattern comportamentali quotidiani
+Esiste un mismatch fondamentale tra utenti e mondo finanziario: manca conoscenza reciproca.
 
-💡 LA NOSTRA SOLUZIONE (2 min)
-DEEP4IT = La tecnologia più avanzata in Italia per BEHAVIORAL FORECASTING
+Lato UTENTI:
+• 65% non comprende prodotti finanziari
+• Decisioni basate su emozioni, non su dati
+• Mancanza di guidance personalizzata
+
+Lato ISTITUTI FINANZIARI:
+• Perdono il dialogo con i clienti, mancano dati conversazionali
+• Non sanno il "quando" intervenire
+• Modelli basati solo su dati "freddi"
+
+Risultato:
+→ Gap nell'offerta di prodotti ottimali, soddisfazione clienti sotto il potenziale, opportunità di retention non sfruttate
+
+💡 DATI E TECNOLOGIA PIÙ AVANZATA (2 min)
+DEEP4IT = Dati e tecnologia più evoluta in Italia per behavioral analytics e forecasting
 
 Come funziona:
 1. SoldoGPT raccoglie dati comportamentali real-time via WhatsApp
 2. I nostri algoritmi identificano pattern predittivi unici
 3. Trasformiamo questi pattern in actionable insights per le banche
 
-Esempio concreto:
-"Il nostro motore prevede con 78% di accuratezza che Mario aumenterà le spese alimentari del 25% nei prossimi 12 giorni → La banca può offrire proattivamente una carta con cashback supermercati"
+VALIDAZIONE:
+• Premio Kaleyra (Tata Communications) per innovazione
+• Grant speciale Deloitte tra 200+ startup italiane  
+• Selezionati da PoliHub (Politecnico di Milano)
+• Ammessi a Le Village by Credit Agricole
 
 🚀 CHI SIAMO (1 min)
 • Team di 7 persone: 4 co-founder + 3 ricercatori
