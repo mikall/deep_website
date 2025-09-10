@@ -65,8 +65,21 @@ const AboutSection = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Handle next slide
   const nextSlide = useCallback(() => {
@@ -293,7 +306,7 @@ const AboutSection = () => {
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
-                transform: `translateX(-${activeIndex * (100/3)}%)`,
+                transform: `translateX(-${activeIndex * (isMobile ? 100 : 100/3)}%)`,
               }}
             >
               {useCases.map((useCase) => (
