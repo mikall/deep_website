@@ -1,14 +1,13 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { 
-  ChevronLeft, 
-  ChevronRight, 
+import {
+  ChevronLeft,
+  ChevronRight,
   GraduationCap,
   GitCompare,
   Settings,
   Database,
-  Cpu,
   Users
 } from "lucide-react";
 
