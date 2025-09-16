@@ -42,21 +42,15 @@ const useCases: UseCase[] = [
   },
   {
     id: 4,
-    title: "Data Services",
-    description: "Behavior Analytics, Market Insights, Media Services/ADV, Trend Forecasting e Custom Search per offrire alle banche intelligence di mercato avanzata.",
-    icon: <Database className="w-8 h-8 text-primary" />,
+    title: "Welfare Aziendale",
+    description: "Integriamo SoldoGPT nei programmi welfare per migliorare il benessere finanziario dei dipendenti, misurando e riducendo lo stress finanziario nei team aziendali.",
+    icon: <Users className="w-8 h-8 text-primary" />,
   },
   {
     id: 5,
-    title: "Technology Services",
-    description: "White-label Conversational AI e modelli predittivi avanzati inclusi i nostri algoritmi di Behavioural Forecasting per churn prediction, next best action e pattern comportamentali.",
-    icon: <Cpu className="w-8 h-8 text-primary" />,
-  },
-  {
-    id: 6,
-    title: "Advisory Services",
-    description: "Portfolio Optimization, Competitive Positioning ed Education Program Design per istituti finanziari basati sui nostri insights.",
-    icon: <Users className="w-8 h-8 text-primary" />,
+    title: "Market Insights",
+    description: "Supportiamo istituzioni finanziarie con ricerche e analisi di mercato per lo sviluppo di prodotti e strategie più allineate alle esigenze reali.",
+    icon: <Database className="w-8 h-8 text-primary" />,
   },
 ];
 
@@ -151,10 +145,10 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            <span className="text-primary">La Nostra Visione</span>
+            <span className="text-primary">La Nostra Missione</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            Deep4IT sviluppa la tecnologia più evoluta ed avanzata in Italia per il behavioural forecasting a partire da dati finanziari. Abbiamo di recente lanciato SoldoGPT, il nostro agente finanziario personale su WhatsApp che educa, confronta e gestisce le finanze degli utenti. SoldoGPT serve sia consumatori individuali che aziende per il welfare dei dipendenti, e le competenze sviluppate nel prodotto consumer arricchiscono la nostra capacità di innovazione nell&apos;intelligence B2B.
+            Portiamo l&apos;intelligenza artificiale al servizio del benessere finanziario delle persone. SoldoGPT è il nostro coach AI su WhatsApp che educa, supporta e guida verso decisioni più consapevoli. Serviamo individui, dipendenti aziendali e trasformiamo ogni interazione in apprendimento per aiutare sempre più persone.
           </p>
         </div>
 
@@ -164,7 +158,7 @@ const AboutSection = () => {
               Agente AI <span className="text-primary">Finanziario Intelligente</span>
             </h3>
             <p className="text-body text-gray-300 mb-6">
-              Il nostro agente AI conversazionale predittivo agisce sia come coach finanziario iper-personalizzato che come strumento di intelligence strategica. Interpreta i pattern finanziari individuali con notevole precisione per fornire insights predittivi su misura per ogni situazione specifica, aiutando i singoli a prendere decisioni migliori e permettendo alle istituzioni di creare relazioni con i clienti profondamente personalizzate.
+              Il nostro agente AI conversazionale predittivo agisce come coach finanziario iper-personalizzato per il tuo benessere. Interpreta i tuoi pattern finanziari con notevole precisione per fornirti guidance su misura per ogni tua esigenza specifica, aiutandoti a prendere decisioni migliori e a costruire un rapporto sano con le tue finanze.
             </p>
             <ul className="space-y-3">
               {[
@@ -267,7 +261,7 @@ const AboutSection = () => {
             Il nostro <span className="text-primary">Ecosistema</span>
           </h3>
           <p className="text-body text-gray-300 max-w-2xl mx-auto">
-            SoldoGPT fornisce supporto finanziario personale mentre le competenze sviluppate alimentano il nostro Co-Innovation Lab B2B.
+            SoldoGPT accompagna individui e dipendenti aziendali nel loro percorso verso il benessere finanziario.
           </p>
         </div>
 

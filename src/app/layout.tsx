@@ -16,9 +16,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Deep4IT | Foundational Predictive AI Models for Financial Services",
-  description: "Advanced predictive analytics to optimise your finances and anticipate your banking needs.",
-  keywords: "fintech, artificial intelligence, predictive analytics, personal finance, banking",
+  title: "Deep4IT | Foundational AI Models per il Benessere e l'Inclusione Finanziaria",
+  description: "Miglioriamo il benessere finanziario delle persone attraverso SoldoGPT, il coach AI conversazionale che educa, supporta e guida verso decisioni più consapevoli.",
+  keywords: "benessere finanziario, educazione finanziaria, intelligenza artificiale, coach AI, SoldoGPT, inclusione finanziaria",
 };
 
 export default function RootLayout({

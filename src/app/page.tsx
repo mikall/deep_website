@@ -3,8 +3,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import DemoSection from "@/components/DemoSection";
-import TeamSection from "@/components/TeamSection";
 import SelectionsSection from "@/components/SelectionsSection";
 import RoadmapSection from "@/components/RoadmapSection";
 import Footer from "@/components/Footer";
@@ -19,13 +17,11 @@ export default function Home() {
         <div className="fixed inset-0 z-1">
           <SquaresAnimation />
         </div>
-        
+
         {/* Page sections */}
         <HeroSection />
         <AboutSection />
-        <DemoSection />
         <SelectionsSection />
-        <TeamSection />
         <RoadmapSection />
       </main>
       <Footer />

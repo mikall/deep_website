@@ -20,8 +20,8 @@ const roadmapSteps: RoadmapStep[] = [
   },
   {
     id: 2,
-    title: "Problem-Solution Validation",
-    description: "Validazione della fattibilità di mercato attraverso diversi MVP. Esplorazione di modelli e insights che non richiedono integrazione tecnica complessa. Creazione del Co-Innovation Lab per sperimentare l'utilizzo dei dati comportamentali.",
+    title: "Discovery & Market Intelligence",
+    description: "Fase di ricerca intensiva che ha rivelato insight cruciali: il 50% dei clienti bancari non riceve supporto attivo, l'80% della GenZ evita le filiali, le competenze finanziarie italiane sono drammaticamente basse. Le istituzioni privilegiano stabilità rispetto a innovazioni complesse, mentre la domanda di supporto accessibile è enorme. Decine di interviste con consulenti, banche e utenti vulnerabili hanno confermato: serve un approccio diverso che recuperi il dialogo con TUTTI i clienti.",
     date: "Q1-Q2 2025"
   },
   {

@@ -70,9 +70,7 @@ const Navbar = () => {
             <div className="flex items-center space-x-8 h-full">
               <NavLink href="#home" label="Home" />
               <NavLink href="#about" label="Vision" />
-              <NavLink href="#demo" label="Demo" />
               <NavLink href="#selections" label="Riconoscimenti" />
-              <NavLink href="#team" label="Team" />
               <NavLink href="#roadmap" label="Roadmap" />
               <Link 
                 href="#contact" 
@@ -125,9 +123,7 @@ const Navbar = () => {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-md">
           <MobileNavLink href="#home" label="Home" onClick={handleNavigation} />
           <MobileNavLink href="#about" label="Vision" onClick={handleNavigation} />
-          <MobileNavLink href="#demo" label="Demo" onClick={handleNavigation} />
           <MobileNavLink href="#selections" label="Riconoscimenti" onClick={handleNavigation} />
-          <MobileNavLink href="#team" label="Team" onClick={handleNavigation} />
           <MobileNavLink href="#roadmap" label="Roadmap" onClick={handleNavigation} />
           <div className="pt-4 pb-2">
             <Link 

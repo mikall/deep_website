@@ -20,30 +20,27 @@ const HeroSection = () => {
           {/* Text content */}
           <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h1 className="text-display text-white">
-              Agente AI<br />
-              <span className="text-primary">Finanziario Predittivo</span>
+              AI per il<br />
+              <span className="text-primary">Benessere Finanziario</span>
             </h1>
             <p className="text-body-lg text-gray-300 mb-8 max-w-lg">
-              Forniamo coaching finanziario personalizzato e insights attraverso modelli generativi e predittivi—migliorando i risultati sia per le istituzioni che per i singoli individui.
+              Miglioriamo il tuo benessere finanziario con educazione personalizzata, aiuto nella gestione quotidiana e supporto nelle decisioni importanti.
             </p>
             <div className="flex flex-wrap gap-2 mb-8">
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#AnalisiPredittiva</span>
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#AIConversazionale</span>
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#InsightPersonalizzati</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#EducazioneFinanziaria</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#BenessereFiananziario</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#CoachingPersonalizzato</span>
             </div>
             <div className="flex flex-wrap gap-4">
-              <button 
-                onClick={() => {
-                  const demoSection = document.getElementById('demo');
-                  if (demoSection) {
-                    demoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}
-                className="bg-primary hover:bg-primary/80 text-primary-foreground px-6 py-3 rounded-md font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 shadow-lg hover:shadow-primary/20"
+              <a
+                href="https://soldogpt.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary hover:bg-primary/80 text-primary-foreground px-6 py-3 rounded-md font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 shadow-lg hover:shadow-primary/20 inline-block"
               >
-                Vedi la Demo
-              </button>
-              <button 
+                Prova SoldoGPT
+              </a>
+              <button
                 onClick={() => {
                   const aboutSection = document.getElementById('about');
                   if (aboutSection) {

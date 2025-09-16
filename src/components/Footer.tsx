@@ -16,7 +16,7 @@ const Footer = () => {
               Deep4IT
             </Link>
             <p className="text-gray-400 text-body-sm mb-6">
-              Potenziamo istituzioni finanziarie e individui con la tecnologia più avanzata di behavioral forecasting per insights e guidance personalizzati.
+              Miglioriamo il benessere finanziario delle persone attraverso SoldoGPT, il coach AI conversazionale che educa, supporta e guida verso decisioni più consapevoli.
             </p>
             <div className="flex">
               <a
@@ -38,9 +38,7 @@ const Footer = () => {
               {[
                 { label: "Home", href: "#home" },
                 { label: "Vision", href: "#about" },
-                { label: "Demo", href: "#demo" },
                 { label: "Riconoscimenti", href: "#selections" },
-                { label: "Team", href: "#team" },
                 { label: "Roadmap", href: "#roadmap" },
               ].map((link) => (
                 <li key={link.label}>
