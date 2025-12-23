@@ -16,9 +16,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Deep4IT | Foundational AI Models per il Benessere e l'Inclusione Finanziaria",
-  description: "Miglioriamo il benessere finanziario delle persone attraverso SoldoGPT, il coach AI conversazionale che educa, supporta e guida verso decisioni più consapevoli.",
-  keywords: "benessere finanziario, educazione finanziaria, intelligenza artificiale, coach AI, SoldoGPT, inclusione finanziaria",
+  title: "Deep4IT | Advanced AI Technologies for Financial Decision Intelligence",
+  description: "We develop proprietary AI technologies for the financial sector: Multi-Agent AI Systems, Persistent Long-term Memory, and Behavioral Forecasting. Juno is our AI assistant team for workers' financial wellbeing.",
+  keywords: "financial AI, multi-agent AI, behavioral forecasting, persistent memory, Juno, AI financial assistant, B2B2E, financial wellbeing, employee benefits",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${spaceGrotesk.variable} ${spaceMono.variable} antialiased bg-black font-sans`}
       >

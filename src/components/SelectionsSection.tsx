@@ -14,41 +14,32 @@ interface Selection {
   logoAlt: string;
 }
 
-// Organizations that selected us
+// Organizations that selected us - 2025 only
 const selections: Selection[] = [
-  {
-    id: 3,
-    title: "Startup Contest",
-    organization: "A Tata Communication Company",
-    year: "2024",
-    description: "Premio Kaleyra per Canale di Comunicazione ad Alto Potenziale.",
-    logoSrc: "/images/kaleyra.avif",
-    logoAlt: "Kaleyra Logo"
-  },
   {
     id: 2,
     title: "Special Grant",
     organization: "Officine Innovazione",
     year: "2025",
-    description: "Assegnato un grant speciale unico tra più di 200 startup in Italia.",
+    description: "Unique special grant among more than 200 startups in Italy.",
     logoSrc: "/images/deloitte.png",
     logoAlt: "Deloitte Logo"
   },
   {
     id: 1,
-    title: "Programma di accelerazione",
+    title: "Acceleration Program",
     organization: "PoliHub",
     year: "2025",
-    description: "Acceleratore deeptech del Politecnico di Milano, cohort 2025.",
+    description: "Deeptech accelerator of Politecnico di Milano, cohort 2025.",
     logoSrc: "/images/polihub.webp",
     logoAlt: "PoliHub Logo"
   },
   {
     id: 4,
-    title: "Programma di innovazione",
+    title: "Innovation Program",
     organization: "Le Village",
     year: "2025",
-    description: "Ammessi al network internazionale di innovazione di Credit Agricole.",
+    description: "Admitted to Credit Agricole's international innovation network.",
     logoSrc: "/images/levillage.png",
     logoAlt: "Le Village by Credit Agricole Logo"
   },
@@ -89,14 +80,14 @@ const SelectionsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            <span className="text-primary">Riconoscimenti</span>
+            <span className="text-primary">2025 Awards & Recognition</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            Il nostro approccio innovativo al behavioral forecasting finanziario è stato riconosciuto da organizzazioni leader nei settori finanziario e tecnologico.
+            Our innovative approach to AI technologies for the financial sector has been recognized by leading organizations in financial and technology sectors.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {selections.map((selection, index) => (
             <div
               key={selection.id}

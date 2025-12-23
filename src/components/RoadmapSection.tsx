@@ -10,31 +10,37 @@ interface RoadmapStep {
   date: string;
 }
 
-// Roadmap data
+// Roadmap data - Updated with pivot story
 const roadmapSteps: RoadmapStep[] = [
   {
     id: 1,
-    title: "Ricerca e Fattibilità Tecnica",
-    description: "Collaborazione con team di ricerca universitari per sviluppare la tecnologia di behavioral forecasting. Validazione della fattibilità tecnica e delle tecnologie abilitanti. Partecipazione a acceleratori deeptech per rafforzare la ricerca sui modelli predittivi comportamentali.",
+    title: "Research on Behavioral Forecasting",
+    description: "Research on behavioral forecasting from transactional data. Collaboration with university research teams to develop behavioral predictive models and validate technical feasibility. Participation in deeptech accelerators.",
     date: "Q4 2024"
   },
   {
     id: 2,
-    title: "Discovery & Market Intelligence",
-    description: "Fase di ricerca intensiva che ha rivelato insight cruciali: il 50% dei clienti bancari non riceve supporto attivo, l'80% della GenZ evita le filiali, le competenze finanziarie italiane sono drammaticamente basse. Le istituzioni privilegiano stabilità rispetto a innovazioni complesse, mentre la domanda di supporto accessibile è enorme. Decine di interviste con consulenti, banche e utenti vulnerabili hanno confermato: serve un approccio diverso che recuperi il dialogo con TUTTI i clienti.",
+    title: "B2B Banking: MVP & Market Fit",
+    description: "First B2B selling phase to banks with 'best next action' MVP product. Long sales cycles, complex integrations. Strategic pivot: from banking technology to improving consumer/employee decisions through technological micro-adjustments.",
     date: "Q1-Q2 2025"
   },
   {
     id: 3,
-    title: "Building & Testing SoldoGPT",
-    description: "Q3: Sviluppo di SoldoGPT, l'agente finanziario su WhatsApp per educazione, confronto e gestione delle finanze personali. Q4: Testing intensivo con utenti per validare e migliorare i modelli di behavioral forecasting.",
+    title: "B2B2E: MVP & GTM Validation",
+    description: "Launch of Business-to-Business-to-Employee model with Juno. Go-to-market validation through Labor Consulting Firms. 24h activation, zero IT integration. Traction: 5 committed partners, 15,000+ immediate employee reach. x6 more effective than traditional financial education.",
     date: "Q3-Q4 2025"
   },
   {
     id: 4,
-    title: "Scaling & Miglioramento",
-    description: "Scaling di SoldoGPT per raccogliere dati comportamentali su larga scala. Potenziamento dei servizi Deep4IT B2B basati sui pattern identificati. Espansione delle funzionalità e miglioramento continuo dei modelli predittivi.",
-    date: "2026+"
+    title: "Strategic Partnerships & Product V1",
+    description: "Strategic partnerships with medium-large Labor Consulting Firms. POC (Proof of Concept) implementations with enterprise clients. Development of Juno V1 with enhanced features based on user feedback and behavioral data.",
+    date: "Q1-Q2 2026"
+  },
+  {
+    id: 5,
+    title: "Scaling & Evolution",
+    description: "Distribution expansion through Labor Consulting Firms: Italy first, then EU expansion (2027: UK). Evolution from voice-ready to voice-first architecture. Enhancement of behavioral forecasting models on anonymized aggregated data for institutional insights.",
+    date: "Q3 2026+"
   }
 ];
 
@@ -80,7 +86,7 @@ const RoadmapSection = () => {
             <span className="text-primary">Roadmap</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            Il nostro percorso per trasformare le decisioni finanziarie attraverso il behavioral forecasting e SoldoGPT.
+            Our journey: from behavioral forecasting research to the launch of Juno, the AI assistant team for workers&apos; financial wellbeing.
           </p>
         </div>
 

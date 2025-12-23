@@ -69,12 +69,12 @@ const Navbar = () => {
           <div className="hidden md:flex items-center justify-center flex-1 h-full">
             <div className="flex items-center space-x-8 h-full">
               <NavLink href="#home" label="Home" />
-              <NavLink href="#about" label="Vision" />
-              <NavLink href="#selections" label="Riconoscimenti" />
+              <NavLink href="#about" label="Technology" />
+              <NavLink href="#selections" label="Awards" />
               <NavLink href="#roadmap" label="Roadmap" />
-              <Link 
-                href="#contact" 
-                className="bg-primary hover:bg-primary/80 text-primary-foreground px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 flex items-center justify-center h-8"
+              <Link
+                href="#contact"
+                className="bg-primary hover:bg-primary/80 text-primary-foreground px-4 rounded-md text-body-sm font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 flex items-center justify-center h-8"
                 onClick={(e) => {
                   e.preventDefault();
                   const contactSection = document.querySelector('footer');
@@ -83,13 +83,13 @@ const Navbar = () => {
                       behavior: 'smooth',
                       block: 'start'
                     });
-                    
+
                     // Update URL without page reload
                     window.history.pushState(null, '', '#contact');
                   }
                 }}
               >
-                Contatti
+                Contact
               </Link>
             </div>
           </div>
@@ -101,7 +101,7 @@ const Navbar = () => {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none"
               aria-expanded="false"
             >
-              <span className="sr-only">Apri menu principale</span>
+              <span className="sr-only">Open main menu</span>
               {isOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
@@ -122,8 +122,8 @@ const Navbar = () => {
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-md">
           <MobileNavLink href="#home" label="Home" onClick={handleNavigation} />
-          <MobileNavLink href="#about" label="Vision" onClick={handleNavigation} />
-          <MobileNavLink href="#selections" label="Riconoscimenti" onClick={handleNavigation} />
+          <MobileNavLink href="#about" label="Technology" onClick={handleNavigation} />
+          <MobileNavLink href="#selections" label="Awards" onClick={handleNavigation} />
           <MobileNavLink href="#roadmap" label="Roadmap" onClick={handleNavigation} />
           <div className="pt-4 pb-2">
             <Link 

@@ -19,37 +19,37 @@ interface UseCase {
   icon: React.ReactNode;
 }
 
-// Use cases
+// Use cases - Updated to reflect technology ecosystem
 const useCases: UseCase[] = [
   {
     id: 1,
-    title: "Insegna",
-    description: "Il nostro agente su WhatsApp fornisce educazione finanziaria personalizzata. Con il 65% degli italiani che non comprende concetti finanziari elementari, rendiamo la finanza accessibile attraverso conversazioni naturali.",
-    icon: <GraduationCap className="w-8 h-8 text-primary" />,
-  },
-  {
-    id: 2,
-    title: "Confronta",
-    description: "Analizziamo prodotti finanziari in tempo reale, aiutando gli utenti a trovare le migliori soluzioni per le loro esigenze attraverso il canale più usato in Italia: WhatsApp (90% della popolazione).",
-    icon: <GitCompare className="w-8 h-8 text-primary" />,
-  },
-  {
-    id: 3,
-    title: "Gestisce",
-    description: "Assistiamo nella gestione quotidiana delle finanze personali, dall&apos;analisi delle spese al controllo dei budget, fino alla pianificazione degli investimenti.",
-    icon: <Settings className="w-8 h-8 text-primary" />,
-  },
-  {
-    id: 4,
-    title: "Welfare Aziendale",
-    description: "Integriamo SoldoGPT nei programmi welfare per migliorare il benessere finanziario dei dipendenti, misurando e riducendo lo stress finanziario nei team aziendali.",
+    title: "Multi-Agent Coordination",
+    description: "Specialized AI agents team collaborating to provide comprehensive financial support: HR, education, budgeting, comparison. Each agent brings specific expertise working in perfect synergy.",
     icon: <Users className="w-8 h-8 text-primary" />,
   },
   {
-    id: 5,
-    title: "Market Insights",
-    description: "Supportiamo istituzioni finanziarie con ricerche e analisi di mercato per lo sviluppo di prodotti e strategie più allineate alle esigenze reali.",
+    id: 2,
+    title: "Persistent Memory",
+    description: "Conversational context that evolves and enriches over time. We remember preferences, financial history, and goals to provide increasingly personalized and relevant guidance.",
     icon: <Database className="w-8 h-8 text-primary" />,
+  },
+  {
+    id: 3,
+    title: "Behavioral Forecasting",
+    description: "Behavioral predictions from transactional data. We anticipate needs, identify financial risks, and suggest proactive actions based on individual spending patterns.",
+    icon: <GitCompare className="w-8 h-8 text-primary" />,
+  },
+  {
+    id: 4,
+    title: "Voice-Ready Architecture",
+    description: "Native support for audio messages on WhatsApp today, ready for future voice interfaces. Channel-agnostic architecture designed for the voice-first evolution of the sector.",
+    icon: <GraduationCap className="w-8 h-8 text-primary" />,
+  },
+  {
+    id: 5,
+    title: "B2B2E Distribution",
+    description: "Distribution via Labor Consulting Firms: zero friction, 24h activation, no IT integration required. Massive and immediate access to thousands of employees.",
+    icon: <Settings className="w-8 h-8 text-primary" />,
   },
 ];
 
@@ -144,27 +144,27 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-h2 text-white">
-            <span className="text-primary">La Nostra Missione</span>
+            <span className="text-primary">Our Technology</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
-            Portiamo l&apos;intelligenza artificiale al servizio del benessere finanziario delle persone. SoldoGPT è il nostro coach AI su WhatsApp che educa, supporta e guida verso decisioni più consapevoli. Serviamo individui, dipendenti aziendali e trasformiamo ogni interazione in apprendimento per aiutare sempre più persone.
+            Deep4IT develops proprietary AI technologies for the financial sector, focusing on three fundamental pillars that transform how people interact with their finances.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-2 md:order-1">
-            <h3 className="text-h3 text-white">
-              Agente AI <span className="text-primary">Finanziario Intelligente</span>
+            <h3 className="text-h3 text-white mb-4">
+              <span className="text-primary">1.</span> Multi-Agent AI Systems
             </h3>
             <p className="text-body text-gray-300 mb-6">
-              Il nostro agente AI conversazionale predittivo agisce come coach finanziario iper-personalizzato per il tuo benessere. Interpreta i tuoi pattern finanziari con notevole precisione per fornirti guidance su misura per ogni tua esigenza specifica, aiutandoti a prendere decisioni migliori e a costruire un rapporto sano con le tue finanze.
+              Coordinated AI agent systems that collaborate to provide comprehensive and personalized financial support. Each agent specializes in a specific domain (HR, education, budgeting, comparison) and works together to offer coherent and contextualized guidance.
             </p>
             <ul className="space-y-3">
               {[
-                "Conversazioni naturali che semplificano concetti finanziari complessi",
-                "Insights iper-personalizzati basati sul DNA finanziario individuale",
-                "Guida adattiva che evolve con il percorso finanziario unico di ogni persona",
-                "Integrazione senza soluzione di continuità con gli ecosistemi finanziari esistenti",
+                "Coordinated multi-agent architecture",
+                "Voice-ready architecture (native audio support + future voice interfaces)",
+                "Hybrid AI Core: GenAI + Deterministic guardrails for finance",
+                "Channel-agnostic: WhatsApp today, ready for future voice interfaces",
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5">
@@ -255,12 +255,161 @@ const AboutSection = () => {
           </div>
         </div>
 
+        {/* Second pillar: Persistent Memory */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="order-1 md:order-1">
+            <div className="relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/70 rounded-lg blur opacity-30 animate-pulse"></div>
+              <div className="relative bg-black border border-gray-800 rounded-lg p-6 shadow-xl">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-sm font-semibold text-white">Conversation Memory</div>
+                  <div className="text-xs text-gray-400">Session History</div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2 p-3 bg-gray-900 rounded border border-gray-800">
+                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                    <span className="text-xs text-gray-400">Context retained across sessions</span>
+                  </div>
+                  <div className="flex items-center space-x-2 p-3 bg-gray-900 rounded border border-gray-800">
+                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                    <span className="text-xs text-gray-400">Long-term user preferences</span>
+                  </div>
+                  <div className="flex items-center space-x-2 p-3 bg-gray-900 rounded border border-gray-800">
+                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                    <span className="text-xs text-gray-400">Financial history awareness</span>
+                  </div>
+                  <div className="mt-4 p-3 bg-primary/10 border border-primary/30 rounded">
+                    <div className="text-xs text-primary font-mono">Memory evolves with every interaction</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="order-2 md:order-2">
+            <h3 className="text-h3 text-white mb-4">
+              <span className="text-primary">2.</span> Persistent Long-term Memory
+            </h3>
+            <p className="text-body text-gray-300 mb-6">
+              Persistent conversational memory that allows our AI agents to remember context, history, and user preferences over time, building increasingly personalized and relevant support with each interaction.
+            </p>
+            <ul className="space-y-3">
+              {[
+                "Conversational continuity across sessions",
+                "Growing personalization over time",
+                "Deep understanding of individual financial context",
+                "Privacy by design, GDPR compliant",
+              ].map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="h-2 w-2 bg-primary rounded-full animate-ping"></div>
+                  </div>
+                  <span className="text-gray-300">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Third pillar: Behavioral Forecasting */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="order-2 md:order-1">
+            <h3 className="text-h3 text-white mb-4">
+              <span className="text-primary">3.</span> Behavioral Forecasting
+            </h3>
+            <p className="text-body text-gray-300 mb-6">
+              Predictive models that analyze behavioral patterns from transactional data to anticipate needs, identify risks, and suggest proactive actions. Our technology transforms financial data into predictive insights to improve decision-making.
+            </p>
+            <ul className="space-y-3">
+              {[
+                "Prediction of spending patterns and financial behaviors",
+                "Early identification of financial stress",
+                "Personalized proactive suggestions (intelligent nudging)",
+                "Anonymous aggregated insights for financial institutions and companies",
+              ].map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="h-2 w-2 bg-primary rounded-full animate-ping"></div>
+                  </div>
+                  <span className="text-gray-300">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="order-1 md:order-2">
+            <div className="relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/70 rounded-lg blur opacity-30 animate-pulse"></div>
+              <div className="relative bg-black border border-gray-800 rounded-lg p-6 shadow-xl">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-sm font-semibold text-white">Behavioral Analytics</div>
+                  <div className="text-xs text-gray-400">Forecasting Engine</div>
+                </div>
+                <div className="space-y-3">
+                  <div className="h-32 bg-gray-900 rounded border border-gray-800 p-3">
+                    <div className="text-xs text-gray-400 mb-2">Transaction Pattern Analysis</div>
+                    <div className="space-y-2">
+                      {[0, 1, 2].map((i) => (
+                        <div key={i} className="flex items-center space-x-2">
+                          <div className="h-2 bg-primary/30 rounded animate-pulse" style={{ width: `${70 - i * 15}%`, animationDelay: `${i * 0.2}s` }}></div>
+                          <span className="text-xs text-gray-500">{`Pattern ${i + 1}`}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="p-2 bg-gray-900 rounded border border-gray-800 text-center">
+                      <div className="text-xs text-gray-400">Prediction Accuracy</div>
+                      <div className="text-lg text-primary font-bold">+15%</div>
+                    </div>
+                    <div className="p-2 bg-gray-900 rounded border border-gray-800 text-center">
+                      <div className="text-xs text-gray-400">Education Effectiveness</div>
+                      <div className="text-lg text-primary font-bold">x6</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Product Section: Juno */}
+        <div className="mb-16 p-8 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl">
+          <div className="text-center mb-6">
+            <h3 className="text-h3 text-white mb-2">
+              Our Product: <span className="text-primary">Juno</span>
+            </h3>
+            <p className="text-h4 text-gray-300 mb-4">The Financial Assistant for Every Worker</p>
+            <p className="text-body text-gray-300 max-w-3xl mx-auto mb-6">
+              The first AI assistant team dedicated to employee financial wellbeing. Accessible via WhatsApp, Juno reduces the financial stress of 32% of European workers and automates HR operational load.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-black/50 p-4 rounded-lg border border-gray-800">
+              <h4 className="text-body font-semibold text-white mb-2">For Employees</h4>
+              <p className="text-body-sm text-gray-300">Team of AI experts available 24/7 on WhatsApp for comprehensive and personalized financial support.</p>
+            </div>
+            <div className="bg-black/50 p-4 rounded-lg border border-gray-800">
+              <h4 className="text-body font-semibold text-white mb-2">For Companies</h4>
+              <p className="text-body-sm text-gray-300">Reduces HR workload by automating recurring inquiries. Improves retention and performance by reducing financial stress.</p>
+            </div>
+          </div>
+          <div className="text-center">
+            <a
+              href="https://ojuno.lovable.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary hover:bg-primary/80 text-primary-foreground px-8 py-3 rounded-md font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 shadow-lg hover:shadow-primary/20"
+            >
+              Learn more about Juno →
+            </a>
+          </div>
+        </div>
+
         <div className="mb-8 text-center">
           <h3 className="text-h3 text-white">
-            Il nostro <span className="text-primary">Ecosistema</span>
+            Our <span className="text-primary">Technology Ecosystem</span>
           </h3>
           <p className="text-body text-gray-300 max-w-2xl mx-auto">
-            SoldoGPT accompagna individui e dipendenti aziendali nel loro percorso verso il benessere finanziario.
+            The technologies that power Juno and transform financial decisions.
           </p>
         </div>
 

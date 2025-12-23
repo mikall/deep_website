@@ -20,25 +20,25 @@ const HeroSection = () => {
           {/* Text content */}
           <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h1 className="text-display text-white">
-              AI per il<br />
-              <span className="text-primary">Benessere Finanziario</span>
+              Advanced AI Technologies<br />
+              for <span className="text-primary">Financial Decision Intelligence</span>
             </h1>
             <p className="text-body-lg text-gray-300 mb-8 max-w-lg">
-              Miglioriamo il tuo benessere finanziario con educazione personalizzata, aiuto nella gestione quotidiana e supporto nelle decisioni importanti.
+              We develop proprietary AI technologies that transform how people make financial decisions.
             </p>
             <div className="flex flex-wrap gap-2 mb-8">
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#EducazioneFinanziaria</span>
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#BenessereFiananziario</span>
-              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#CoachingPersonalizzato</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#MultiAgentAI</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#PersistentMemory</span>
+              <span className="bg-primary/20 text-primary/90 px-3 py-1 rounded-full text-sm">#BehavioralForecasting</span>
             </div>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://soldogpt.com"
+                href="https://ojuno.lovable.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary hover:bg-primary/80 text-primary-foreground px-6 py-3 rounded-md font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 shadow-lg hover:shadow-primary/20 inline-block"
               >
-                Prova SoldoGPT
+                Discover Juno
               </a>
               <button
                 onClick={() => {
@@ -49,7 +49,7 @@ const HeroSection = () => {
                 }}
                 className="bg-transparent text-primary hover:text-primary/80 px-6 py-3 rounded-md font-medium transition-colors duration-300 border border-primary/40 hover:border-primary/60"
               >
-                Scopri di più
+                Our Technology
               </button>
             </div>
           </div>
@@ -111,7 +111,7 @@ const HeroSection = () => {
         
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-          <span className="text-gray-500 text-sm mb-2">Scorri per esplorare</span>
+          <span className="text-gray-500 text-sm mb-2">Scroll to explore</span>
           <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center p-1">
             <div className="w-1 h-2 bg-primary rounded-full animate-bounce"></div>
           </div>
