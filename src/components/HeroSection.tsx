@@ -33,7 +33,7 @@ const HeroSection = () => {
             </div>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://ojuno.lovable.app"
+                href="https://ojuno.ai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary hover:bg-primary/80 text-primary-foreground px-6 py-3 rounded-md font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 shadow-lg hover:shadow-primary/20 inline-block"

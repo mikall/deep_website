@@ -394,7 +394,7 @@ const AboutSection = () => {
           </div>
           <div className="text-center">
             <a
-              href="https://ojuno.lovable.app"
+              href="https://ojuno.ai"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-primary hover:bg-primary/80 text-primary-foreground px-8 py-3 rounded-md font-medium transition-colors duration-300 border border-primary/80 hover:border-primary/60 shadow-lg hover:shadow-primary/20"
