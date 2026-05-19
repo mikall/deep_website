@@ -18,7 +18,7 @@ const clients: Client[] = [
   {
     id: 1,
     name: "Tata Communications",
-    subtitle: "Contest vinto",
+    subtitle: "Grant dicembre 2024",
     logoSrc: "/images/tata-communications.svg",
     logoAlt: "Tata Communications",
     invert: true,
@@ -45,7 +45,7 @@ const clients: Client[] = [
   {
     id: 3,
     name: "Deloitte",
-    subtitle: "Grant 2025",
+    subtitle: "Grant marzo 2025",
     logoSrc: "/images/deloitte.png",
     logoAlt: "Deloitte",
     logoClass: "h-20",
@@ -53,7 +53,7 @@ const clients: Client[] = [
   {
     id: 4,
     name: "PoliHub",
-    subtitle: "Acceleratore",
+    subtitle: "Incubatore 2025",
     logoSrc: "/images/polihub.webp",
     logoAlt: "PoliHub",
     logoClass: "h-14",
@@ -61,7 +61,7 @@ const clients: Client[] = [
   {
     id: 5,
     name: "Le Village by CA",
-    subtitle: "Network Crédit Agricole",
+    subtitle: "Acceleratore 2025-26",
     logoSrc: "/images/levillage.png",
     logoAlt: "Le Village by Crédit Agricole",
     logoClass: "h-20",
