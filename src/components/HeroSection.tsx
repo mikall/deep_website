@@ -123,9 +123,7 @@ const RotatingLine = ({
   );
 
   return (
-    <span
-      className={`relative inline-block align-top break-words ${className}`}
-    >
+    <span className={`relative block w-full break-words ${className}`}>
       <span className="invisible" aria-hidden="true">
         {longestVariant}
       </span>
@@ -157,9 +155,7 @@ const HeroSection = () => {
             style={{ fontSize: "clamp(2rem, 5.5vw, 3.75rem)" }}
           >
             <RotatingLine variants={LINE_1} initialDelay={2500} />
-            <br />
             <RotatingLine variants={LINE_2} initialDelay={3500} />
-            <br />
             <RotatingLine
               variants={LINE_3}
               initialDelay={4500}
