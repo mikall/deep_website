@@ -152,7 +152,10 @@ const HeroSection = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h1 className="text-display text-white leading-tight">
+          <h1
+            className="text-white font-bold leading-tight tracking-tight mb-6"
+            style={{ fontSize: "clamp(1.125rem, 5.5vw, 3.75rem)" }}
+          >
             <RotatingLine variants={LINE_1} initialDelay={2500} />
             <br />
             <RotatingLine variants={LINE_2} initialDelay={3500} />
