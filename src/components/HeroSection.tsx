@@ -124,12 +124,12 @@ const RotatingLine = ({
 
   return (
     <span
-      className={`relative inline-block whitespace-pre align-top ${className}`}
+      className={`relative inline-block align-top break-words ${className}`}
     >
       <span className="invisible" aria-hidden="true">
         {longestVariant}
       </span>
-      <span className="absolute inset-0">{displayText}</span>
+      <span className="absolute inset-0 flex items-center">{displayText}</span>
     </span>
   );
 };
@@ -146,7 +146,7 @@ const HeroSection = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20 md:py-32">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20 md:py-32">
         <div
           className={`transition-all duration-1000 transform ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -154,7 +154,7 @@ const HeroSection = () => {
         >
           <h1
             className="text-white font-bold leading-tight tracking-tight mb-6"
-            style={{ fontSize: "clamp(1.125rem, 5.5vw, 3.75rem)" }}
+            style={{ fontSize: "clamp(2rem, 5.5vw, 3.75rem)" }}
           >
             <RotatingLine variants={LINE_1} initialDelay={2500} />
             <br />
