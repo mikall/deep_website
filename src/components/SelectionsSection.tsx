@@ -35,12 +35,12 @@ const clients: Client[] = [
   },
   {
     id: 6,
-    name: "Expert.AI",
+    name: "Villanova.AI",
     subtitle: "Cliente",
-    logoSrc: "/images/expert-ai.svg",
-    logoAlt: "Expert.AI",
+    logoSrc: "/images/villanova-ai.png",
+    logoAlt: "Villanova.AI",
     invert: true,
-    logoClass: "h-10",
+    logoClass: "h-12",
   },
   {
     id: 3,
@@ -173,7 +173,7 @@ const SelectionsSection = () => {
           }`}
         >
           <h2 className="text-h2 text-white">
-            <span className="text-primary">Clienti e partner</span>
+            <span className="text-primary">Riconoscimenti e clienti</span>
           </h2>
           <p className="text-body-lg text-gray-300 max-w-3xl mx-auto">
             Lavoriamo al fianco di aziende leader e siamo riconosciuti da acceleratori e network di innovazione.
