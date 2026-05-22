@@ -36,6 +36,12 @@ const AboutSection = () => {
           <p className="text-body-lg">
             Attraverso dati transazionali, dati conversazionali e canali digitali di relazione, aiutiamo le aziende a comprendere meglio bisogni, comportamenti e intenzioni dei propri clienti, per costruire offerte, comunicazioni e customer journey <span className="text-white font-medium">più rilevanti, contestuali e misurabili</span>.
           </p>
+
+          <Divider />
+
+          <p className="text-body-lg">
+            A questo si affianca una competenza consolidata nei <span className="text-primary font-medium">Next-Gen Digital Payments</span> e nella <span className="text-primary font-medium">Payments &amp; Transaction Intelligence</span>: progettiamo flussi di pagamento sicuri, scalabili e orchestrati su più canali, dove ogni transazione diventa anche un <span className="text-white font-medium">dato di valore</span> per business, rischio e relazione con il cliente.
+          </p>
         </article>
       </div>
     </section>
