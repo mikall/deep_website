@@ -46,17 +46,21 @@
     }
 
     .avatar {
-      width: 96px;
-      height: 96px;
+      width: 104px;
+      height: 104px;
       border-radius: 50%;
       margin: 0 auto 18px;
       background: #2a2f3a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 34px;
-      font-weight: 700;
-      letter-spacing: -1px;
+      border: 2px solid rgba(255, 255, 255, 0.18);
+      overflow: hidden;
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.04);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     h1 {
@@ -123,14 +127,16 @@
 
 <body>
   <main class="card">
-    <div class="avatar">MA</div>
+    <div class="avatar">
+      <img src="/michele/avatar.jpg" alt="Michele Alletto" />
+    </div>
 
     <h1>Michele Alletto</h1>
     <p class="role">Founder &amp; CTO</p>
     <p class="company">Deep4IT</p>
 
     <div class="actions">
-      <a class="button primary" href="./michele.vcf">
+      <a class="button primary" href="/michele.vcf">
         Salva contatto
       </a>
 
@@ -155,9 +161,6 @@
       </a>
     </div>
 
-    <p class="footer">
-      Scansiona il QR code per aprire questa pagina.
-    </p>
   </main>
 </body>
 </html>
