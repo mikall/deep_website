@@ -16,9 +16,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Deep4IT | Software complesso. Delivery accelerato. Ingaggio iperpersonalizzato.",
-  description: "Deep4IT combina senior engineering e intelligenza artificiale per aiutare le aziende a costruire software più velocemente e creare percorsi cliente iperpersonalizzati.",
-  keywords: "Deep4IT, AI-native product factory, customer profiling, hyperpersonalized engagement, senior engineering, software italia",
+  title: "Deep4IT | Agent-ready knowledge for complex products and processes",
+  description: "Deep4IT è un AI Lab specializzato in agent-ready knowledge: trasformiamo contenuti complessi in conoscenza strutturata, tracciabile e interrogabile dagli agenti AI.",
+  keywords: "Deep4IT, agent-ready knowledge, AI Lab, rappresentazione della conoscenza, knowledge base, agenti AI, Indexable, Juno AI, knowledge retention, software italia",
 };
 
 export default function RootLayout({

@@ -15,7 +15,7 @@ const Footer = () => {
               Deep4IT
             </Link>
             <p className="text-gray-400 text-body-sm mb-6">
-              AI-native Product Factory con distinctive understanding di customer profile e digital transactions.
+              Agent-ready knowledge for complex products and processes.
             </p>
             <div className="flex">
               <a

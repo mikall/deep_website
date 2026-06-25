@@ -8,28 +8,23 @@ const SCRAMBLE_TICK_MS = 50;
 const SCRAMBLE_CHARS =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#@!%&";
 
+// Riga 1 — cosa è il prodotto
 const LINE_1 = [
-  "Mercati regolamentati",
-  "Software complesso",
-  "Sviluppo automatico",
-  "Senior Accountability",
-  "Compliance by design",
-  "AI-assisted engineering",
+  "Knowledge base agent-ready",
+  "Conoscenza prodotto interrogabile",
+  "Documentazione normalizzata",
+  "Conoscenza tracciabile",
+  "Product knowledge computabile",
+  "Specifiche agent-ready",
 ];
+// Riga 2 — cosa risolve
 const LINE_2 = [
-  "Tempi ridotti",
-  "TTM accelerato",
-  "Compressione dei costi",
-  "Delivery prevedibile",
-  "Rischi ridotti",
-  "Documentazione chiara",
-];
-const LINE_3 = [
-  "Iperprofilazione dei clienti",
-  "Canali digitali",
-  "Percorsi conversazionali",
-  "Vendita in conversazione",
-  "Prequalifica in conversazione",
+  "Gap analysis RFP",
+  "Testbook AI generated",
+  "Manualistica AI generated",
+  "Triage issue e ticket",
+  "Sviluppo guidato da specifiche",
+  "Analisi impatti CR",
 ];
 
 const randomChar = () =>
@@ -123,11 +118,15 @@ const RotatingLine = ({
   );
 
   return (
-    <span className={`relative block w-full break-words ${className}`}>
+    <span
+      className={`relative block w-full whitespace-nowrap text-center ${className}`}
+    >
       <span className="invisible" aria-hidden="true">
         {longestVariant}
       </span>
-      <span className="absolute inset-0 flex items-center">{displayText}</span>
+      <span className="absolute inset-0 flex items-center justify-center">
+        {displayText}
+      </span>
     </span>
   );
 };
@@ -150,15 +149,17 @@ const HeroSection = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
+          <p className="text-primary font-medium uppercase tracking-[0.25em] text-center text-xs sm:text-sm mb-6">
+            Agent-ready knowledge for complex products and processes
+          </p>
           <h1
-            className="text-white font-bold leading-tight tracking-tight mb-6"
-            style={{ fontSize: "clamp(2rem, 5.5vw, 3.75rem)" }}
+            className="text-white font-bold leading-tight tracking-tight mb-6 text-center"
+            style={{ fontSize: "clamp(1.5rem, 4.8vw, 3.75rem)" }}
           >
             <RotatingLine variants={LINE_1} initialDelay={2500} />
-            <RotatingLine variants={LINE_2} initialDelay={3500} />
             <RotatingLine
-              variants={LINE_3}
-              initialDelay={4500}
+              variants={LINE_2}
+              initialDelay={3500}
               className="text-primary"
             />
           </h1>
