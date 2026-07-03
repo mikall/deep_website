@@ -12,6 +12,7 @@ interface Client {
   logoAlt: string;
   invert?: boolean;
   logoClass: string;
+  logoNote?: string;
 }
 
 const clients: Client[] = [
@@ -40,7 +41,8 @@ const clients: Client[] = [
     logoSrc: "/images/villanova-ai.png",
     logoAlt: "Villanova.AI",
     invert: true,
-    logoClass: "h-12",
+    logoClass: "h-8",
+    logoNote: "TISCALI group",
   },
   {
     id: 3,
@@ -221,7 +223,7 @@ const SelectionsSection = () => {
                 >
                   <div className="bg-black p-6 h-full">
                     <div className="flex flex-col items-center text-center h-full">
-                      <div className="h-24 flex items-center justify-center mb-4 w-full">
+                      <div className="h-24 flex flex-col items-center justify-center mb-4 w-full">
                         <Image
                           src={client.logoSrc}
                           alt={client.logoAlt}
@@ -230,6 +232,11 @@ const SelectionsSection = () => {
                           className={`${client.logoClass} w-auto object-contain`}
                           style={client.invert ? { filter: "brightness(0) invert(1)" } : undefined}
                         />
+                        {client.logoNote && (
+                          <span className="mt-2 text-xs font-bold uppercase tracking-[0.15em] text-white">
+                            {client.logoNote}
+                          </span>
+                        )}
                       </div>
                       <p className="text-caption text-gray-400">{client.subtitle}</p>
                     </div>
