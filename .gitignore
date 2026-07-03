@@ -42,3 +42,7 @@ next-env.d.ts
 
 # presentation files
 presentation.txt
+
+# local docs / working notes (not for the repo)
+/doc/
+.playwright-mcp/
