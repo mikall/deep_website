@@ -76,7 +76,7 @@ export default function Header() {
           </div>
           <a
             href="#deep4it"
-            className="hidden font-mono text-[11px] uppercase tracking-[0.22em] text-white/80 underline-offset-4 hover:underline md:block"
+            className="font-mono text-[11px] uppercase tracking-[0.22em] text-white/80 underline-offset-4 hover:underline"
           >
             {t.navCta} ↗
           </a>

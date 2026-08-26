@@ -1,8 +1,8 @@
 export default function Manifesto() {
-  const m = { marquee: 'Agent-Ready Company Knowledge' };
+  const m = { marquee: 'Agent-Ready Product Knowledge' };
 
   return (
-    <section className="relative bg-black/55 px-0 py-16 md:py-24">
+    <section className="relative bg-black/55 px-0 py-8 md:py-20">
       {/* kinetic marquee band */}
       <div className="overflow-hidden border-y border-white/10 py-5" aria-hidden="true">
         <div className="marquee-track flex w-max items-center whitespace-nowrap">

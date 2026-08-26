@@ -90,7 +90,7 @@ export function WordReveal({
             className="inline-block will-change-transform"
             style={{
               transform: on ? 'translateY(0)' : 'translateY(110%)',
-              transition: `transform 0.85s cubic-bezier(0.22,1,0.36,1) ${baseDelay + i * step}ms`,
+              transition: `transform 0.55s cubic-bezier(0.22,1,0.36,1) ${baseDelay + i * step}ms`,
             }}
           >
             {w}

@@ -14,7 +14,7 @@ export default function Hero() {
         {/* kicker row */}
         <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-white/50 md:text-[11px]">
           <span>{t.hero.kicker}</span>
-          <span className="hidden md:block">{t.hero.meta[2]}</span>
+          <span className="hidden md:block">Indexable</span>
         </div>
 
         {/* headline */}
@@ -28,14 +28,25 @@ export default function Hero() {
           </h1>
 
           <div className="mt-8 flex flex-col gap-8 md:mt-12 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-xl">
-              <p className="text-base leading-relaxed text-[#B7B7B7] md:text-lg">
-                {t.hero.sub}{' '}
-                <span className="font-medium text-white">{t.hero.subEmphasis}</span>
+            <div className="max-w-2xl">
+              <p className="text-base leading-relaxed text-[#B7B7B7] md:text-lg">{t.hero.sub}</p>
+              <p className="mt-5 font-display text-lg font-medium leading-snug text-white md:text-xl">
+                {t.hero.subEmphasis}
               </p>
-              <p className="mt-5 text-sm leading-relaxed text-white/55 md:text-base">
-                {t.hero.sectorsLine}
-              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a
+                  href={t.hero.ctaPrimary.href}
+                  className="bg-white px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-black transition-colors duration-300 hover:bg-white/85"
+                >
+                  {t.hero.ctaPrimary.label}
+                </a>
+                <a
+                  href={t.hero.ctaSecondary.href}
+                  className="border border-white/30 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-white transition-colors duration-300 hover:border-white"
+                >
+                  {t.hero.ctaSecondary.label}
+                </a>
+              </div>
             </div>
             <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-white/50">
               <span className="line-flow inline-block h-8 w-px bg-white/50" />
@@ -44,14 +55,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* bottom meta strip */}
-        <div className="mt-10 grid grid-cols-1 gap-3 border-t border-white/10 pt-5 font-mono text-[10px] uppercase tracking-[0.24em] text-white/45 sm:grid-cols-3 md:text-[11px]">
-          {t.hero.meta.map((m, i) => (
-            <span key={i} className={i === 1 ? 'sm:text-center' : i === 2 ? 'sm:text-right' : ''}>
-              {m}
-            </span>
-          ))}
-        </div>
       </div>
     </section>
   );

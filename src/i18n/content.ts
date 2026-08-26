@@ -1,11 +1,23 @@
 export type Lang = 'it' | 'en';
 
-export interface WorkflowItem {
-  id: string;
+export interface DiagramLayer {
   title: string;
-  lead: string;
+  sub?: string;
+  highlight?: boolean;
+}
+
+export interface OperationItem {
+  title: string;
+  question: string;
   body: string;
-  outro?: string;
+}
+
+export interface ProjectItem {
+  client: string;
+  title: string;
+  body: string;
+  outcome: string;
+  metric?: string;
 }
 
 export interface Content {
@@ -16,61 +28,140 @@ export interface Content {
     titleLines: string[];
     sub: string;
     subEmphasis: string;
-    sectorsLine: string;
+    ctaPrimary: { label: string; href: string };
+    ctaSecondary: { label: string; href: string };
     scrollHint: string;
-    meta: string[];
   };
-  knowledge: {
+  problem: {
+    index: string;
+    label: string;
+    title: string;
+    intro: string;
+    listLabel: string;
+    items: string[];
+    statement: string;
+    bold: string;
+    close: string;
+  };
+  aiReadiness: {
     index: string;
     label: string;
     title: string;
     paragraphs: string[];
-    indexable: {
+    staccato: string[];
+    bold: string;
+    stats: { value: string; text: string; source: { label: string; href: string } }[];
+    hedge: string;
+  };
+  dataKnowledge: {
+    index: string;
+    label: string;
+    title: string;
+    intro: string;
+    defects: string[];
+    expertPara: string;
+    ragPara: string;
+    bold: string;
+  };
+  indexable: {
+    index: string;
+    label: string;
+    title: string;
+    lead: string[];
+    diagram: {
+      sources: string;
       name: string;
-      claim: string;
-      intro: string;
-      listLabel: string;
-      bullets: string[];
-      outro: string;
+      ops: string;
+      output: string;
+      branches: { title: string; items: string[] }[];
     };
-    indexing: {
-      label: string;
-      term: string;
-      lead: string;
-      flow: string[];
-      indexes: string[];
-      clarify: string;
-      benefitsLabel: string;
-      benefits: string[];
-      tagline: string;
-    };
+    stack: DiagramLayer[];
+    sideTitle: string;
+    sideParagraphs: string[];
+    sideClaim: string;
+    proof: { label: string; text: string; cta: { label: string; href: string } };
   };
-  work: {
+  operations: {
     index: string;
     label: string;
     title: string;
     paragraphs: string[];
-    items: WorkflowItem[];
+    items: OperationItem[];
+    propsLabel: string;
+    props: string[];
   };
-  critical: {
+  contextStat: {
     index: string;
     label: string;
     title: string;
-    paragraphs: string[];
-    formulaLabel: string;
-    formula: string[];
+    stat: { value: string; title: string; qualifier: string; body: string };
+    cta: { label: string; href: string };
   };
-  sectors: {
+  experts: {
     index: string;
     label: string;
     title: string;
-    items: { name: string; tag: string; paragraphs: string[] }[];
+    intro: string;
+    flow: string[];
+    statement: string[];
+  };
+  completeness: {
+    index: string;
+    label: string;
+    title: string;
+    lead: string;
+    emphasis: string;
+    checkLabel: string;
+    checks: string[];
+    outro: string;
+  };
+  deliverables: {
+    index: string;
+    label: string;
+    title: string;
+    intro: string;
+    groups: { name: string; items: string[] }[];
+    outro: string;
+    chain: string[];
+    bold: string;
+  };
+  projects: {
+    index: string;
+    label: string;
+    title: string;
+    outcomeLabel: string;
+    items: ProjectItem[];
+  };
+  techDelivery: {
+    index: string;
+    label: string;
+    title: string;
+    intro: string[];
+    cards: { title: string; body: string }[];
+    bold: string;
+    cta: { label: string; href: string };
+  };
+  industries: {
+    index: string;
+    label: string;
+    title: string;
+    intro: string;
+    items: { name: string; tag: string; body: string }[];
+  };
+  recognition: {
+    index: string;
+    label: string;
+    title: string;
+    body: string;
+    logos: { src: string; alt: string }[];
   };
   about: {
     label: string;
-    paragraphs: string[];
     statement: string[];
-    sectorsLine: string;
+    paragraphs: string[];
+    emphasis: string;
+    cta: { label: string; href: string };
+    tagline: string;
     wordmark: string;
     contacts: {
       label: string;
@@ -81,364 +172,695 @@ export interface Content {
   };
 }
 
+const recognitionLogos = [
+  { src: '/images/deloitte.png', alt: 'Deloitte Innovation 2025' },
+  { src: '/images/polihub.webp', alt: 'PoliHub 2025' },
+  { src: '/images/kaleyra.avif', alt: 'Kaleyra Awards' },
+];
+
 export const content: Record<Lang, Content> = {
   it: {
     nav: [
-      { label: 'Conoscenza', href: '#conoscenza' },
-      { label: 'Processi', href: '#processi' },
-      { label: 'Metodo', href: '#metodo' },
-      { label: 'Settori', href: '#settori' },
-      { label: 'Deep4it', href: '#deep4it' },
+      { label: 'Problema', href: '#problema' },
+      { label: 'Indexable', href: '#indexable' },
+      { label: 'Operazioni', href: '#operazioni' },
+      { label: 'Progetti', href: '#progetti' },
+      { label: 'Deep4IT', href: '#deep4it' },
     ],
     navCta: 'Contattaci',
     hero: {
-      kicker: 'AI Lab — Conoscenza agent-ready',
-      titleLines: [
-        'Trasformiamo informazioni',
-        'e documenti aziendali sparsi',
-        'in conoscenza su cui l\u2019AI',
-        'pu\u00f2 lavorare nei processi critici',
-      ],
-      sub: 'Costruiamo basi di conoscenza strutturate e pronte per l\u2019AI. Su queste automatizziamo processi di analisi, progettazione, documentazione, test e sviluppo software,',
-      subEmphasis: 'mantenendo la revisione esperta dove serve.',
-      sectorsLine:
-        'Lavoriamo in settori altamente regolamentati come Servizi Finanziari e Aerospazio & Difesa, dove affidabilit\u00e0 e controllo sono requisiti essenziali.',
+      kicker: 'Product & Service Knowledge Infrastructure',
+      titleLines: ['Un agente AI è il tuo', 'prossimo nuovo assunto'],
+      sub: 'Prima di affidargli software, analisi, specifiche o manuali, devi portarlo a bordo sulla conoscenza dei tuoi prodotti e servizi, proprio come faresti con una nuova persona. Indexable consolida informazioni e documenti dispersi in conoscenza controllata e verificabile, pronta per persone e agenti AI.',
+      subEmphasis: 'Le persone cambiano. La conoscenza deve restare.',
+      ctaPrimary: { label: 'Scopri come funziona', href: '#indexable' },
+      ctaSecondary: { label: 'Parliamo del tuo caso d’uso', href: '#deep4it' },
       scrollHint: 'Scorri',
-      meta: ['Servizi Finanziari', 'Aerospazio & Difesa', 'Agent-Ready Company Knowledge'],
     },
-    knowledge: {
+    problem: {
       index: '01',
-      label: 'La base',
-      title: 'Prima costruiamo una base di conoscenza pronta per l\u2019AI',
-      paragraphs: [
-        'Le informazioni necessarie per comprendere un prodotto o un sistema sono spesso disperse tra normative, documenti commerciali, requisiti, specifiche, procedure, manuali e documentazione tecnica.',
-        'Per un esperto, queste fonti nel tempo diventano conoscenza del prodotto. Per un agente AI restano documenti separati, duplicati, correlati e talvolta incoerenti.',
-        'Prima di affidare all\u2019AI attivit\u00e0 complesse, queste informazioni devono diventare una base di conoscenza coerente, strutturata e revisionabile.',
+      label: 'Il problema',
+      title: 'Se serve un lungo affiancamento, la conoscenza non è ancora in azienda.',
+      intro: 'Una nuova persona riceve documenti, accesso ai sistemi e indicazioni su dove cercare.',
+      listLabel: 'Per lavorare davvero deve però capire',
+      items: [
+        'Quali informazioni sono valide e quali superate',
+        'Che cosa manca e non è mai stato scritto',
+        'Perché sono state prese determinate decisioni',
+        'Quali eccezioni si applicano nei casi reali',
+        'Quali dipendenze sono più critiche',
+        'Che cosa viene impattato quando qualcosa cambia',
       ],
-      indexable: {
+      statement:
+        'Quando le persone più esperte cambiano ruolo, lasciano l’azienda o vanno in pensione, una parte della conoscenza scompare con loro.',
+      bold: 'I documenti restano. La comprensione del prodotto se ne va.',
+      close: 'Se la conoscenza lascia l’azienda insieme alle persone, non è ancora un vero asset aziendale.',
+    },
+    aiReadiness: {
+      index: '03',
+      label: 'AI readiness',
+      title: 'La tua AI eredita lo stesso problema di onboarding.',
+      paragraphs: [
+        'Modelli e agenti sono sempre più capaci di produrre lavoro complesso. Ma possono lavorare soltanto sulla conoscenza che ricevono.',
+        'Se documenti e sistemi non bastano a rendere autonoma una nuova persona, non possono bastare a rendere affidabile un agente AI.',
+      ],
+      staccato: [
+        'Una specifica può perdere un requisito.',
+        'Un’analisi può ignorare una dipendenza.',
+        'Un manuale può utilizzare una regola superata.',
+        'Il software può essere quasi corretto, ma richiedere una revisione completa.',
+      ],
+      bold: 'Se devi rifarlo a mano per fidarti, non l’hai automatizzato.',
+      stats: [
+        {
+          value: '41%',
+          text: 'dei prototipi GenAI raggiunge la produzione',
+          source: { label: 'Gartner, 2024', href: 'https://www.gartner.com/en/documents/6587902' },
+        },
+        {
+          value: '46%',
+          text: 'degli sviluppatori non si fida dell’accuratezza degli output AI',
+          source: { label: 'Stack Overflow, 2025', href: 'https://survey.stackoverflow.co/2025/ai' },
+        },
+        {
+          value: '66%',
+          text: 'indica come principale frustrazione le soluzioni AI “quasi corrette”',
+          source: { label: 'Stack Overflow, 2025', href: 'https://survey.stackoverflow.co/2025/ai' },
+        },
+      ],
+      hedge:
+        'Le cause del mancato passaggio in produzione sono molte. Una delle più strutturali è la qualità della conoscenza fornita al sistema.',
+    },
+    dataKnowledge: {
+      index: '02',
+      label: 'I dati',
+      title: 'La conoscenza non è tutta nei dati.',
+      intro:
+        'Documenti, ticket, repository, specifiche e manuali raccontano parti diverse dello stesso prodotto o servizio. Le informazioni scritte, però, sono:',
+      defects: [
+        'distribuite in sistemi diversi',
+        'espresse con terminologie differenti',
+        'mescolate tra versioni valide e superate',
+        'talvolta in conflitto tra loro',
+        'separate dal contesto delle decisioni',
+      ],
+      expertPara:
+        'E una parte critica della conoscenza non è mai stata scritta: eccezioni, motivazioni e regole del mestiere vivono nella testa degli esperti, e vanno fatte emergere.',
+      ragPara:
+        'Una ricerca può trovare documenti rilevanti. Un sistema RAG può passarli a un modello. Ma rilevante non significa completo, coerente o aggiornato: dati e documenti esistono, non sono ancora consolidati in una conoscenza univoca, aggiornata e verificabile.',
+      bold: 'Un modello migliore non può recuperare la conoscenza che l’azienda non ha consolidato.',
+    },
+    indexable: {
+      index: '04',
+      label: 'Indexable',
+      title: 'Riporta la conoscenza dentro l’organizzazione.',
+      lead: [
+        'Indexable trasforma informazioni frammentate, documenti e competenza degli esperti in conoscenza di prodotto, servizio e progetto pronta all’uso.',
+        'Rende esplicite regole, decisioni, dipendenze ed eccezioni. Mantiene ogni elemento collegato alle fonti e permette agli esperti di verificare ciò che è valido, ciò che è in conflitto e ciò che manca.',
+        'Il risultato è un asset aziendale duraturo, meno dipendente dalle singole persone e riutilizzabile da team e agenti diversi.',
+      ],
+      diagram: {
+        sources: 'Documenti · Specifiche · Ticket · Repository · Manuali · Esperti',
         name: 'Indexable',
-        claim: 'Il layer di conoscenza alla base dei nostri processi AI',
-        intro:
-          'Indexable trasforma informazioni e documenti aziendali sparsi in una base di conoscenza strutturata e revisionabile dagli esperti, utilizzabile sia dalle persone sia dagli agenti AI.',
-        listLabel: 'Indexable permette di',
-        bullets: [
-          'integrare informazioni provenienti da fonti e formati differenti',
-          'organizzare e collegare le informazioni che descrivono prodotti e sistemi',
-          'consolidare informazioni duplicate o correlate',
-          'mantenere il collegamento con le fonti originali',
-          'permettere agli esperti di revisionare la knowledge base',
-          'rendere la conoscenza disponibile agli agenti AI per attivit\u00e0 specifiche',
+        ops: 'organizza · riconcilia · completa · traccia · revisiona',
+        output: 'Conoscenza controllata di prodotto e servizio',
+        branches: [
+          { title: 'Persone', items: ['Onboarding più rapido', 'Meno affiancamento', 'Conoscenza che resta'] },
+          { title: 'Agenti AI', items: ['Contesto più completo', 'Maggiore accuratezza', 'Deliverable più affidabili'] },
         ],
-        outro:
-          'La knowledge base diventa un asset aziendale riutilizzabile: una rappresentazione condivisa della conoscenza di prodotto o di sistema che pu\u00f2 alimentare pi\u00f9 applicazioni, agenti e processi AI.',
       },
-      indexing: {
-        label: 'Come funziona',
-        term: 'Knowledge Indexing',
-        lead:
-          'Indexable non si limita a dividere i documenti e cercare i passaggi pi\u00f9 simili. Costruisce pi\u00f9 indici complementari della conoscenza, collegati alle fonti, che permettono all\u2019AI di trovare e ricostruire il contesto rilevante per ogni attivit\u00e0.',
-        flow: ['Documenti', 'Knowledge Indexes', 'Contesto rilevante', 'AI'],
-        indexes: ['Concetti', 'Soggetti', 'Relazioni', 'Struttura'],
-        clarify:
-          'Gli indici sono viste complementari sullo stesso materiale sorgente: non uno schema rigido, non un modello unico.',
-        benefitsLabel: 'I vantaggi',
-        benefits: [
-          'Meno contesto irrilevante',
-          'Migliore copertura delle informazioni',
-          'Tracciabilit\u00e0 delle fonti',
-          'Risultati pi\u00f9 ripetibili',
-        ],
-        tagline: 'Indexable rende la conoscenza aziendale indicizzabile e navigabile dall\u2019AI.',
+      stack: [
+        { title: 'Business · IT · Operations' },
+        { title: 'Il tuo stack AI e di agenti', sub: 'Framework e orchestratori • Agenti custom • Copilot • Modelli' },
+        { title: 'Indexable', sub: 'Conoscenza di prodotto e servizio agent-ready', highlight: true },
+        { title: 'Le tue fonti', sub: 'Documenti • Sistemi • Esperti di dominio' },
+      ],
+      sideTitle: 'Mantieni il tuo stack AI. Migliora la conoscenza su cui lavora.',
+      sideParagraphs: [
+        'Indexable non sostituisce modelli, copilot o framework di agenti. Costruisce il layer di conoscenza che permette a persone e sistemi AI diversi di lavorare sulla stessa rappresentazione controllata del prodotto.',
+      ],
+      sideClaim: 'I modelli cambieranno. La conoscenza dei tuoi prodotti e servizi deve restare.',
+      proof: {
+        label: 'Sul campo',
+        text: 'Specifiche funzionali per un sistema nazionale di Direct Debit: effort da 3,5 a 1,5 mesi-persona (−57%), ogni requisito tracciabile alla fonte.',
+        cta: { label: 'Vedi il progetto', href: '#progetti' },
       },
     },
-    work: {
-      index: '02',
-      label: 'I processi',
-      title: 'Su questa base automatizziamo il lavoro specialistico',
+    operations: {
+      index: '05',
+      label: 'Le operazioni',
+      title: 'Trovare informazioni non basta.',
       paragraphs: [
-        'Su questa knowledge base costruiamo processi in cui agenti AI svolgono attivit\u00e0 oggi affidate ad analisti, ingegneri, sviluppatori ed esperti di dominio.',
-        'Alcune attivit\u00e0 possono essere automatizzate completamente; altre prevedono una revisione umana. In entrambi i casi l\u2019obiettivo \u00e8 aumentare la capacit\u00e0 dei team specialistici mantenendo il controllo sui passaggi critici.',
+        'Per produrre lavoro affidabile, persone e agenti devono sapere che cosa è valido, che cosa è in conflitto, che cosa manca, quale versione usare e da dove deriva ogni informazione.',
       ],
       items: [
         {
-          id: 'impact',
-          title: 'Impact & Change Analysis',
-          lead:
-            'Analizziamo cambiamenti normativi, di business o tecnici per determinarne l\u2019impatto su prodotti e sistemi.',
+          title: 'Retrieve',
+          question: 'Che cosa sappiamo su questo tema?',
+          body: 'Recupera la conoscenza rilevante insieme alle fonti, alle versioni e al contesto da cui deriva.',
+        },
+        {
+          title: 'Detect conflicts',
+          question: 'Dove le nostre fonti si contraddicono?',
           body:
-            'Identifichiamo le componenti coinvolte, le logiche e le regole da modificare, i processi impattati, le dipendenze e gli artefatti da aggiornare. Produciamo una stima del perimetro, della complessit\u00e0 e dell\u2019impatto del cambiamento.',
-          outro: 'Quando richiesto, confrontiamo inoltre la soluzione risultante con standard e soluzioni di mercato.',
+            'Individua affermazioni incompatibili tra documenti, requisiti, specifiche e versioni prima che vengano trattate come fatti.',
         },
         {
-          id: 'requirements',
-          title: 'Requirements & Specifications',
-          lead:
-            'Trasformiamo esigenze di business, vincoli normativi e input tecnici in requisiti e specifiche strutturate.',
+          title: 'Find gaps',
+          question: 'Che cosa manca rispetto a ciò che era atteso?',
           body:
-            'Produciamo e aggiorniamo requisiti di business, funzionali e tecnici, oltre a specifiche di prodotto e di sistema, secondo i principi dello standard ISO/IEC/IEEE 29148:2018, mantenendo coerenza tra i diversi livelli di requisito e gli input da cui derivano.',
+            'Confronta la conoscenza disponibile con una struttura attesa, un insieme di riferimento o un deliverable target. Rende visibili requisiti mancanti, specifiche incomplete ed eccezioni non documentate che una normale ricerca non può trovare.',
+        },
+      ],
+      propsLabel: 'Proprietà del layer',
+      props: [
+        'Fonti preservate',
+        'Versioni distinguibili',
+        'Decisioni tracciabili',
+        'Conoscenza revisionabile',
+        'Intervento degli esperti sui punti critici',
+      ],
+    },
+    contextStat: {
+      index: '06',
+      label: 'Efficienza del contesto',
+      title: 'Più conoscenza utile. Meno rumore per il modello.',
+      stat: {
+        value: '68×',
+        title: 'contesto più compatto per query',
+        qualifier: 'a parità di recall sul nostro gold set interno',
+        body:
+          'Indexable recupera le evidenze necessarie limitando le informazioni irrilevanti passate al modello. Un contesto più preciso riduce il rumore e permette agli agenti di lavorare su una rappresentazione più focalizzata e verificabile del prodotto.',
+      },
+      cta: { label: 'Scopri come funziona il 68×', href: '#operazioni' },
+    },
+    experts: {
+      index: '06',
+      label: 'Gli esperti',
+      title: 'Le persone esperte continuano a creare conoscenza. L’organizzazione smette di perderla.',
+      intro:
+        'Indexable non assume che ogni documento sia corretto e non trasforma automaticamente ogni informazione in conoscenza di prodotto e servizio. Gli esperti di dominio restano responsabili delle decisioni critiche. Il loro contributo diventa però cumulativo:',
+      flow: [
+        'Informazioni raccolte',
+        'Conoscenza estratta e organizzata',
+        'Conflitti e lacune evidenziati',
+        'Revisione degli esperti',
+        'Conoscenza approvata che resta',
+        'Riutilizzo da persone e agenti',
+      ],
+      statement: [
+        'La competenza individuale diventa conoscenza di prodotto e servizio.',
+        'Questa conoscenza diventa utilizzabile da persone e AI.',
+      ],
+    },
+    completeness: {
+      index: '08',
+      label: 'Completezza e controllo',
+      title: 'Nei settori regolamentati, la completezza è parte della correttezza.',
+      lead:
+        'Un output AI può essere corretto nei fatti e comunque sbagliato dal punto di vista operativo. Può aver perso un’eccezione. Una dipendenza. Un requisito nascosto in un altro documento. Una versione più recente della stessa regola.',
+      emphasis: 'Per processi complessi e regolamentati, trovare una risposta rilevante non basta.',
+      checkLabel: 'Devi sapere',
+      checks: [
+        'Se la conoscenza è completa',
+        'Da quale fonte deriva',
+        'Quale versione è valida',
+        'Se esistono informazioni in conflitto',
+        'Quali parti sono state revisionate',
+        'Quali assunzioni restano da verificare',
+      ],
+      outro:
+        'Indexable mantiene conoscenza e deliverable collegati alle evidenze, alle versioni e al processo di revisione.',
+    },
+    deliverables: {
+      index: '07',
+      label: 'I deliverable',
+      title: 'Una conoscenza più chiara e meno ambigua produce lavoro più affidabile.',
+      intro: 'La stessa base di conoscenza serve a creare e mantenere:',
+      groups: [
+        {
+          name: 'Software e sistemi AI',
+          items: ['Software e componenti applicativi', 'Agenti e workflow AI'],
         },
         {
-          id: 'design',
-          title: 'Analysis & Design',
-          lead:
-            'Trasformiamo requisiti e vincoli in una progettazione sufficientemente dettagliata da guidare le fasi successive di sviluppo.',
+          name: 'Analisi e specifiche',
+          items: ['Specifiche di prodotto e servizio', 'Analisi d’impatto', 'Test book'],
+        },
+        {
+          name: 'Documentazione e operations',
+          items: ['Manuali tecnici', 'Procedure operative', 'Documentazione regolamentata'],
+        },
+      ],
+      outro: 'Ogni deliverable resta collegato alla conoscenza da cui è stato generato.',
+      chain: ['Fonte', 'Conoscenza', 'Deliverable'],
+      bold: 'Non soltanto output plausibili. Lavoro che gli esperti possono verificare, approvare e mantenere.',
+    },
+    projects: {
+      index: '08',
+      label: 'Progetti reali',
+      title: 'Indexable è già al lavoro su sistemi complessi.',
+      outcomeLabel: 'Outcome',
+      items: [
+        {
+          client: 'Banca Centrale, Medio Oriente',
+          title: 'Specifiche funzionali per un sistema nazionale di Direct Debit',
           body:
-            'Per il software utilizziamo l\u2019Attribute-Driven Design (ADD) del SEI, progettando l\u2019architettura a partire dai requisiti architetturalmente significativi, inclusi requisiti funzionali, attributi di qualit\u00e0 e vincoli.',
-          outro:
-            'Produciamo analisi funzionali e tecniche, architetture, componenti, interfacce e decisioni progettuali che diventano input strutturati per lo sviluppo.',
+            'Indexable ha trasformato documentazione sorgente complessa in conoscenza strutturata di prodotto e ha supportato la creazione semiautomatizzata delle specifiche funzionali, mantenendo ogni requisito collegato alle evidenze da cui derivava.',
+          outcome: 'Effort ridotto da 3,5 a 1,5 mesi-persona, con ogni requisito tracciabile alla fonte.',
+          metric: '−57%',
         },
         {
-          id: 'development',
-          title: 'Software Development',
-          lead: 'Lo sviluppo parte dal design, non da un prompt.',
+          client: 'Banca Centrale, Africa',
+          title: 'La base di conoscenza di una piattaforma Anti-Money Laundering',
           body:
-            'Utilizziamo strumenti e agenti custom che prendono in ingresso il lavoro di progettazione di dettaglio svolto nelle fasi precedenti: requisiti, analisi, architettura, componenti, interfacce, vincoli e standard tecnologici.',
-          outro:
-            'Su questa base automatizziamo implementazione, modifica e verifica del software, mantenendo la revisione esperta dove necessaria e la continuit\u00e0 tra requirements \u2192 design \u2192 code \u2192 test.',
+            'Requisiti, integrazioni, regole e comportamento del sistema sono stati organizzati in una base revisionabile e tracciabile.',
+          outcome:
+            'Conoscenza regolatoria e tecnica complessa resa esplicita e mantenibile durante l’evoluzione della piattaforma.',
         },
         {
-          id: 'testing',
-          title: 'Testing',
-          lead:
-            'Generiamo e aggiorniamo test book, test case, scenari end-to-end, regression test e criteri di accettazione a partire da requisiti, specifiche e cambiamenti introdotti.',
-          body: '',
-        },
-        {
-          id: 'documentation',
-          title: 'Technical Documentation & Manuals',
-          lead:
-            'Generiamo e aggiorniamo manuali tecnici e operativi, documentazione di prodotto e documentazione di manutenzione a partire dalla conoscenza del sistema, con revisione e approvazione degli esperti nei passaggi richiesti.',
-          body: '',
+          client: 'Sistemi di difesa',
+          title: 'Documentazione tecnica e manuali assistiti dall’AI',
+          body:
+            'Indexable supporta la creazione e la manutenzione di documentazione tecnica per sistemi complessi, mantenendo gli esperti responsabili della revisione.',
+          outcome: 'L’AI accelera la produzione. Le persone mantengono il controllo.',
         },
       ],
     },
-    critical: {
-      index: '03',
-      label: 'Metodo',
-      title: 'AI per processi dove l\u2019errore conta',
-      paragraphs: [
-        'L\u2019AI \u00e8 pi\u00f9 semplice da introdurre nelle attivit\u00e0 in cui un errore pu\u00f2 essere individuato e corretto facilmente.',
-        'Deep4it la porta anche nei processi specialistici e critici, dove affidabilit\u00e0 e controllo sono requisiti del processo.',
+    techDelivery: {
+      index: '09',
+      label: 'Technology & Delivery',
+      title: 'Usa Indexable con il tuo team. Oppure affidaci il risultato.',
+      intro: [
+        'Questo è ciò che abbiamo già fatto. Ora puoi usare lo stesso prodotto con il tuo team, oppure affidarci il risultato.',
+        'Quando servono anche capacità progettuale e competenze specialistiche, Deep4IT utilizza la stessa tecnologia per realizzare software, analisi, specifiche e documentazione complessa.',
       ],
-      formulaLabel: 'Per questo combiniamo',
-      formula: ['Knowledge base strutturate', 'Agenti AI', 'Processi controllati', 'Revisione degli esperti'],
+      cards: [
+        {
+          title: 'Indexable per il tuo team',
+          body:
+            'Tecnologia, integrazioni e processi per costruire e mantenere la vostra base di conoscenza di prodotto, servizio e progetto.',
+        },
+        {
+          title: 'Delivery by Deep4IT',
+          body:
+            'Un team specializzato che utilizza Indexable per produrre e mantenere deliverable completi, tracciabili e revisionabili.',
+        },
+      ],
+      bold: 'Puoi adottare la tecnologia, coinvolgere il nostro team oppure combinare entrambi.',
+      cta: { label: 'Parliamo del tuo caso d’uso', href: '#deep4it' },
     },
-    sectors: {
-      index: '04',
+    industries: {
+      index: '10',
       label: 'Settori',
-      title: 'I settori in cui lavoriamo',
+      title: 'Costruito per prodotti, servizi e sistemi complessi.',
+      intro:
+        'Indexable è progettato per organizzazioni in cui la conoscenza di prodotto è vasta, frammentata e difficile da mantenere, e dove le informazioni mancanti hanno conseguenze reali.',
       items: [
         {
           name: 'Servizi Finanziari',
           tag: 'FS',
-          paragraphs: [
-            'Lavoriamo su prodotti finanziari, sistemi di pagamento e piattaforme regolamentate, applicando l\u2019AI a processi di impact analysis, requirements engineering, analisi funzionale e tecnica, sviluppo software, testing e documentazione.',
-          ],
+          body: 'Pagamenti, banking, infrastrutture finanziarie, compliance e documentazione di prodotti regolamentati.',
         },
         {
-          name: 'Aerospazio & Difesa',
-          tag: 'A&D',
-          paragraphs: [
-            'Lavoriamo su sistemi complessi come radar e sistemi di difesa, utilizzando l\u2019AI per produrre e aggiornare analisi, specifiche, software, test e manualistica tecnica.',
-          ],
+          name: 'Difesa & Sistemi Complessi',
+          tag: 'DEF',
+          body: 'Grandi corpus di documentazione tecnica, specifiche, procedure operative, test e manuali.',
+        },
+        {
+          name: 'Enterprise IT',
+          tag: 'EIT',
+          body:
+            'Conoscenza di prodotto e di progetto distribuita tra requisiti di business, specifiche tecniche, repository e documentazione operativa.',
         },
       ],
     },
+    recognition: {
+      index: '11',
+      label: 'Riconoscimenti',
+      title: 'Riconosciuti per l’innovazione',
+      body:
+        'Deep4IT e la tecnologia alla base di Indexable sono state selezionate e riconosciute da programmi italiani dedicati all’innovazione.',
+      logos: recognitionLogos,
+    },
     about: {
-      label: 'Chi siamo',
-      paragraphs: [],
-      statement: [
-        'Trasformiamo informazioni sparse in basi di conoscenza pronte per l\u2019AI.',
-        'Su queste basi costruiamo processi che automatizzano attivit\u00e0 e aumentano la capacit\u00e0 dei team specialistici.',
+      label: 'Deep4IT',
+      statement: ['Il prossimo membro del tuo team', 'non dovrebbe ripartire da zero.'],
+      paragraphs: [
+        'Che sia una nuova persona o un agente AI, deve poter comprendere che cosa l’azienda sa, quale informazione è valida e da dove deriva.',
+        'Indexable riporta la conoscenza di prodotto e servizio dentro l’organizzazione e la trasforma in un asset che rimane, evolve e continua a produrre valore.',
       ],
-      sectorsLine: 'Lavoriamo nei Servizi Finanziari e nell\u2019Aerospazio & Difesa.',
+      emphasis: 'Un’azienda che non trattiene ciò che sa non può essere pronta per l’AI.',
+      cta: { label: 'Richiedi una demo di Indexable', href: 'mailto:info@deep4it.com?subject=Demo%20Indexable' },
+      tagline: 'Product & service knowledge, made agent-ready.',
       wordmark: 'DEEP4',
       contacts: {
         label: 'Contatti',
         lines: ['Via Italia, 44', '20900 Monza, Italia'],
         email: 'info@deep4it.com',
         legal:
-          '\u00a9 2026 Deep4It srl. Tutti i diritti riservati.  |  Capitale sociale: \u20ac 70.000,00  |  P.IVA: 13477300969',
+          '© 2026 Deep4IT srl. Tutti i diritti riservati.  |  Capitale sociale: € 70.000,00  |  P.IVA: 13477300969',
       },
     },
   },
   en: {
     nav: [
-      { label: 'Knowledge', href: '#conoscenza' },
-      { label: 'Processes', href: '#processi' },
-      { label: 'Method', href: '#metodo' },
-      { label: 'Industries', href: '#settori' },
-      { label: 'Deep4it', href: '#deep4it' },
+      { label: 'Problem', href: '#problema' },
+      { label: 'Indexable', href: '#indexable' },
+      { label: 'Operations', href: '#operazioni' },
+      { label: 'Projects', href: '#progetti' },
+      { label: 'Deep4IT', href: '#deep4it' },
     ],
     navCta: 'Get in touch',
     hero: {
-      kicker: 'AI Lab — Agent-ready knowledge',
-      titleLines: [
-        'We transform scattered',
-        'enterprise information and documents',
-        'into knowledge AI can work on',
-        'in critical processes',
-      ],
-      sub: 'We build structured, AI-ready knowledge bases. On top of them we automate analysis, design, documentation, testing and software development processes,',
-      subEmphasis: 'keeping expert review where it matters.',
-      sectorsLine:
-        'We work in highly regulated industries such as Financial Services and Aerospace & Defense, where reliability and control are essential requirements.',
+      kicker: 'Product & Service Knowledge Infrastructure',
+      titleLines: ['An AI agent is your', 'next new hire'],
+      sub: 'Before trusting it with software, analyses, specifications or manuals, you have to onboard it on the knowledge of your products and services, just as you would a new person. Indexable consolidates scattered information and documents into controlled, verifiable knowledge, ready for people and AI agents.',
+      subEmphasis: 'People change. The knowledge must remain.',
+      ctaPrimary: { label: 'See how it works', href: '#indexable' },
+      ctaSecondary: { label: 'Let’s talk about your use case', href: '#deep4it' },
       scrollHint: 'Scroll',
-      meta: ['Financial Services', 'Aerospace & Defense', 'Agent-Ready Company Knowledge'],
     },
-    knowledge: {
+    problem: {
       index: '01',
-      label: 'The foundation',
-      title: 'First, we build an AI-ready knowledge base',
-      paragraphs: [
-        'The information needed to understand a product or system is often scattered across regulations, commercial documents, requirements, specifications, procedures, manuals and technical documentation.',
-        'For an expert, over time, these sources become knowledge of the product. For an AI agent they remain separate documents \u2014 duplicated, correlated and sometimes incoherent.',
-        'Before entrusting AI with complex activities, this information must become a coherent, structured and reviewable knowledge base.',
+      label: 'The problem',
+      title: 'If long shadowing is needed, the knowledge is not in the company yet.',
+      intro: 'A new person receives documents, access to systems and directions on where to look.',
+      listLabel: 'But to really work, they need to understand',
+      items: [
+        'Which information is valid and which superseded',
+        'What is missing and was never written down',
+        'Why certain decisions were made',
+        'Which exceptions apply in real cases',
+        'Which dependencies are most critical',
+        'What is impacted when something changes',
       ],
-      indexable: {
+      statement:
+        'When the most experienced people change role, leave the company or retire, part of the knowledge disappears with them.',
+      bold: 'The documents remain. The understanding of the product walks away.',
+      close: 'If knowledge leaves the company together with people, it is not yet a real company asset.',
+    },
+    aiReadiness: {
+      index: '03',
+      label: 'AI readiness',
+      title: 'Your AI inherits the same onboarding problem.',
+      paragraphs: [
+        'Models and agents are increasingly capable of producing complex work. But they can only work on the knowledge they are given.',
+        'If documents and systems are not enough to make a new person autonomous, they cannot be enough to make an AI agent reliable.',
+      ],
+      staccato: [
+        'A specification can miss a requirement.',
+        'An analysis can ignore a dependency.',
+        'A manual can apply a superseded rule.',
+        'The software can be almost right, and still require a full review.',
+      ],
+      bold: 'If you have to redo it by hand to trust it, you have not automated it.',
+      stats: [
+        {
+          value: '41%',
+          text: 'of GenAI prototypes reach production',
+          source: { label: 'Gartner, 2024', href: 'https://www.gartner.com/en/documents/6587902' },
+        },
+        {
+          value: '46%',
+          text: 'of developers distrust the accuracy of AI output',
+          source: { label: 'Stack Overflow, 2025', href: 'https://survey.stackoverflow.co/2025/ai' },
+        },
+        {
+          value: '66%',
+          text: 'name “almost right” AI solutions as their top frustration',
+          source: { label: 'Stack Overflow, 2025', href: 'https://survey.stackoverflow.co/2025/ai' },
+        },
+      ],
+      hedge:
+        'There are many reasons prototypes never reach production. One of the most structural is the quality of the knowledge the system is given.',
+    },
+    dataKnowledge: {
+      index: '02',
+      label: 'The data',
+      title: 'The knowledge is not all in the data.',
+      intro:
+        'Documents, tickets, repositories, specifications and manuals tell different parts of the same product or service. The written information, though, is:',
+      defects: [
+        'spread across different systems',
+        'expressed in different terminologies',
+        'mixed between valid and superseded versions',
+        'sometimes in conflict',
+        'detached from the context of decisions',
+      ],
+      expertPara:
+        'And a critical part of the knowledge was never written down: exceptions, rationales and rules of the trade live in the experts’ heads, and have to be drawn out.',
+      ragPara:
+        'A search can find relevant documents. A RAG system can pass them to a model. But relevant does not mean complete, consistent or up to date: the data and documents exist, they are just not yet consolidated into univocal, current, verifiable knowledge.',
+      bold: 'A better model cannot retrieve knowledge the company has never consolidated.',
+    },
+    indexable: {
+      index: '04',
+      label: 'Indexable',
+      title: 'Bring the knowledge back into the organisation.',
+      lead: [
+        'Indexable turns fragmented information, documents and expert know-how into ready-to-use product, service and project knowledge.',
+        'It makes rules, decisions, dependencies and exceptions explicit. It keeps every element linked to its sources and lets experts verify what is valid, what is in conflict and what is missing.',
+        'The result is a durable company asset, less dependent on single individuals and reusable across different teams and agents.',
+      ],
+      diagram: {
+        sources: 'Documents · Specifications · Tickets · Repositories · Manuals · Experts',
         name: 'Indexable',
-        claim: 'The knowledge layer at the foundation of our AI processes',
-        intro:
-          'Indexable transforms scattered enterprise information and documents into a structured knowledge base that experts can review, usable by both people and AI agents.',
-        listLabel: 'Indexable allows you to',
-        bullets: [
-          'integrate information from different sources and formats',
-          'organize and link the information describing products and systems',
-          'consolidate duplicated or related information',
-          'maintain the link with the original sources',
-          'let experts review the knowledge base',
-          'make knowledge available to AI agents for specific tasks',
+        ops: 'organise · reconcile · complete · trace · review',
+        output: 'Controlled product & service knowledge',
+        branches: [
+          { title: 'People', items: ['Faster onboarding', 'Less shadowing', 'Knowledge that stays'] },
+          { title: 'AI agents', items: ['More complete context', 'Higher accuracy', 'More reliable deliverables'] },
         ],
-        outro:
-          'The knowledge base becomes a reusable enterprise asset: a shared representation of product or system knowledge that can feed multiple AI applications, agents and processes.',
       },
-      indexing: {
-        label: 'How it works',
-        term: 'Knowledge Indexing',
-        lead:
-          'Indexable does not simply split documents and search for the most similar passages. It builds multiple complementary indexes of the knowledge, linked to the sources, that allow AI to find and reconstruct the relevant context for every activity.',
-        flow: ['Documents', 'Knowledge Indexes', 'Relevant context', 'AI'],
-        indexes: ['Concepts', 'Subjects', 'Relations', 'Structure'],
-        clarify:
-          'The indexes are complementary views over the same source material: not a rigid schema, not a single fixed model.',
-        benefitsLabel: 'The benefits',
-        benefits: [
-          'Less irrelevant context',
-          'Better information coverage',
-          'Source traceability',
-          'More repeatable results',
-        ],
-        tagline: 'Indexable makes enterprise knowledge indexable and navigable by AI.',
+      stack: [
+        { title: 'Business · IT · Operations' },
+        { title: 'Your AI & agent stack', sub: 'Frameworks & orchestrators • Custom agents • Copilots • Models' },
+        { title: 'Indexable', sub: 'Agent-ready product & service knowledge', highlight: true },
+        { title: 'Your sources', sub: 'Documents • Systems • Domain experts' },
+      ],
+      sideTitle: 'Keep your AI stack. Improve the knowledge it works on.',
+      sideParagraphs: [
+        'Indexable does not replace models, copilots or agent frameworks. It builds the knowledge layer that lets different people and AI systems work on the same controlled representation of the product.',
+      ],
+      sideClaim: 'Models will change. The knowledge of your products and services must remain.',
+      proof: {
+        label: 'In the field',
+        text: 'Functional specifications for a national Direct Debit system: effort from 3.5 to 1.5 person-months (−57%), every requirement traceable to its source.',
+        cta: { label: 'See the project', href: '#progetti' },
       },
     },
-    work: {
-      index: '02',
-      label: 'The processes',
-      title: 'On this foundation we automate specialist work',
+    operations: {
+      index: '05',
+      label: 'The operations',
+      title: 'Finding information is not enough.',
       paragraphs: [
-        'On this knowledge base we build processes in which AI agents carry out activities currently performed by analysts, engineers, developers and domain experts.',
-        'Some activities can be fully automated; others include human review. In both cases the goal is to increase the capacity of specialist teams while keeping control over the critical steps.',
+        'To produce reliable work, people and agents need to know what is valid, what is in conflict, what is missing, which version to use and where each piece of information comes from.',
       ],
       items: [
         {
-          id: 'impact',
-          title: 'Impact & Change Analysis',
-          lead:
-            'We analyze regulatory, business or technical changes to determine their impact on products and systems.',
+          title: 'Retrieve',
+          question: 'What do we know about this?',
+          body: 'Retrieve the relevant knowledge together with the sources, versions and context it derives from.',
+        },
+        {
+          title: 'Detect conflicts',
+          question: 'Where do our sources contradict each other?',
           body:
-            'We identify the components involved, the logic and rules to modify, the impacted processes, the dependencies and the artifacts to update. We produce an estimate of the change\u2019s scope, complexity and impact.',
-          outro: 'When required, we also benchmark the resulting solution against market standards and solutions.',
+            'Identify incompatible statements across documents, requirements, specifications and versions before they are treated as facts.',
         },
         {
-          id: 'requirements',
-          title: 'Requirements & Specifications',
-          lead:
-            'We turn business needs, regulatory constraints and technical inputs into structured requirements and specifications.',
+          title: 'Find gaps',
+          question: 'What is missing against what was expected?',
           body:
-            'We produce and update business, functional and technical requirements, as well as product and system specifications, according to the principles of the ISO/IEC/IEEE 29148:2018 standard, maintaining coherence between the different requirement levels and the inputs they derive from.',
+            'Compare the available knowledge with an expected structure, a reference set or a target deliverable. It surfaces missing requirements, incomplete specifications and undocumented exceptions that ordinary search cannot find.',
+        },
+      ],
+      propsLabel: 'Properties of the layer',
+      props: [
+        'Sources preserved',
+        'Versions distinguishable',
+        'Decisions traceable',
+        'Knowledge reviewable',
+        'Expert intervention on critical points',
+      ],
+    },
+    contextStat: {
+      index: '06',
+      label: 'Context efficiency',
+      title: 'More useful knowledge. Less noise for the model.',
+      stat: {
+        value: '68×',
+        title: 'more compact context per query',
+        qualifier: 'with no loss of recall on our internal gold-set benchmark',
+        body:
+          'Indexable retrieves the necessary evidence while limiting the irrelevant information passed to the model. A more precise context reduces noise and lets agents work on a more focused, verifiable representation of the product.',
+      },
+      cta: { label: 'See how the 68× works', href: '#operazioni' },
+    },
+    experts: {
+      index: '06',
+      label: 'The experts',
+      title: 'Experts keep creating knowledge. The organisation stops losing it.',
+      intro:
+        'Indexable does not assume every document is correct, and does not automatically turn every piece of information into product and service knowledge. Domain experts remain responsible for critical decisions. Their contribution, however, becomes cumulative:',
+      flow: [
+        'Information collected',
+        'Knowledge extracted & organised',
+        'Conflicts & gaps surfaced',
+        'Expert review',
+        'Approved knowledge that stays',
+        'Reuse by people & agents',
+      ],
+      statement: [
+        'Individual expertise becomes product and service knowledge.',
+        'That knowledge becomes usable by people and AI.',
+      ],
+    },
+    completeness: {
+      index: '08',
+      label: 'Completeness & control',
+      title: 'In regulated industries, completeness is part of correctness.',
+      lead:
+        'An AI output can be factually correct and still be operationally wrong. It may have missed an exception. A dependency. A requirement hidden in another document. A more recent version of the same rule.',
+      emphasis: 'For complex, regulated processes, finding a relevant answer is not enough.',
+      checkLabel: 'You need to know',
+      checks: [
+        'Whether the knowledge is complete',
+        'Which source it derives from',
+        'Which version is valid',
+        'Whether conflicting information exists',
+        'Which parts have been reviewed',
+        'Which assumptions remain to be verified',
+      ],
+      outro:
+        'Indexable keeps knowledge and deliverables linked to their evidence, versions and review process.',
+    },
+    deliverables: {
+      index: '07',
+      label: 'The deliverables',
+      title: 'Clearer, less ambiguous knowledge produces more reliable work.',
+      intro: 'The same knowledge base serves to create and maintain:',
+      groups: [
+        {
+          name: 'Software & AI systems',
+          items: ['Software and application components', 'AI agents and workflows'],
         },
         {
-          id: 'design',
-          title: 'Analysis & Design',
-          lead:
-            'We turn requirements and constraints into a design detailed enough to guide the following development phases.',
+          name: 'Analyses & specifications',
+          items: ['Product and service specifications', 'Impact analyses', 'Test books'],
+        },
+        {
+          name: 'Documentation & operations',
+          items: ['Technical manuals', 'Operating procedures', 'Regulated documentation'],
+        },
+      ],
+      outro: 'Every deliverable stays linked to the knowledge it was generated from.',
+      chain: ['Source', 'Knowledge', 'Deliverable'],
+      bold: 'Not just plausible output. Work that experts can verify, approve and maintain.',
+    },
+    projects: {
+      index: '08',
+      label: 'Real projects',
+      title: 'Indexable is already at work on complex systems.',
+      outcomeLabel: 'Outcome',
+      items: [
+        {
+          client: 'Middle East Central Bank',
+          title: 'Functional specifications for a national Direct Debit system',
           body:
-            'For software we use SEI\u2019s Attribute-Driven Design (ADD), designing the architecture from architecturally significant requirements, including functional requirements, quality attributes and constraints.',
-          outro:
-            'We produce functional and technical analyses, architectures, components, interfaces and design decisions that become structured input for development.',
+            'Indexable turned complex source documentation into structured product knowledge and supported the semi-automated creation of functional specifications, keeping every requirement linked to its originating evidence.',
+          outcome: 'Effort reduced from 3.5 to 1.5 person-months, with every requirement traceable to its source.',
+          metric: '−57%',
         },
         {
-          id: 'development',
-          title: 'Software Development',
-          lead: 'Development starts from the design, not from a prompt.',
+          client: 'African Central Bank',
+          title: 'The knowledge base of an Anti-Money Laundering platform',
           body:
-            'We use custom tools and agents that take as input the detailed design work carried out in the previous phases: requirements, analysis, architecture, components, interfaces, constraints and technology standards.',
-          outro:
-            'On this foundation we automate software implementation, modification and verification, keeping expert review where needed and continuity across requirements \u2192 design \u2192 code \u2192 test.',
+            'Requirements, integrations, rules and system behaviour were organised into a reviewable, traceable base.',
+          outcome: 'Complex regulatory and technical knowledge made explicit and maintainable as the platform evolves.',
         },
         {
-          id: 'testing',
-          title: 'Testing',
-          lead:
-            'We generate and update test books, test cases, end-to-end scenarios, regression tests and acceptance criteria from requirements, specifications and introduced changes.',
-          body: '',
-        },
-        {
-          id: 'documentation',
-          title: 'Technical Documentation & Manuals',
-          lead:
-            'We generate and update technical and operational manuals, product documentation and maintenance documentation from system knowledge, with expert review and approval at the required steps.',
-          body: '',
+          client: 'Defence Systems',
+          title: 'AI-assisted technical documentation & manuals',
+          body:
+            'Indexable supports the creation and maintenance of technical documentation for complex systems, keeping experts responsible for review.',
+          outcome: 'AI speeds up production. People keep control.',
         },
       ],
     },
-    critical: {
-      index: '03',
-      label: 'Method',
-      title: 'AI for processes where errors matter',
-      paragraphs: [
-        'AI is easier to introduce in activities where an error can be easily spotted and corrected.',
-        'Deep4it brings it into specialist, critical processes as well, where reliability and control are requirements of the process itself.',
+    techDelivery: {
+      index: '09',
+      label: 'Technology & Delivery',
+      title: 'Use Indexable with your team. Or entrust us with the result.',
+      intro: [
+        'This is what we have already done. Now you can use the same product with your team, or entrust us with the result.',
+        'When project capacity and specialist skills are also needed, Deep4IT uses the same technology to deliver software, analyses, specifications and complex documentation.',
       ],
-      formulaLabel: 'That is why we combine',
-      formula: ['Structured knowledge bases', 'AI agents', 'Controlled processes', 'Expert review'],
+      cards: [
+        {
+          title: 'Indexable for your team',
+          body:
+            'Technology, integrations and processes to build and maintain your own base of product, service and project knowledge.',
+        },
+        {
+          title: 'Delivery by Deep4IT',
+          body:
+            'A specialised team that uses Indexable to produce and maintain complete, traceable, reviewable deliverables.',
+        },
+      ],
+      bold: 'Adopt the technology, engage our team, or combine both.',
+      cta: { label: 'Let’s talk about your use case', href: '#deep4it' },
     },
-    sectors: {
-      index: '04',
+    industries: {
+      index: '10',
       label: 'Industries',
-      title: 'The industries we work in',
+      title: 'Built for complex products, services and systems.',
+      intro:
+        'Indexable is designed for organisations where product knowledge is large, fragmented and difficult to maintain, and where missing information has real consequences.',
       items: [
         {
           name: 'Financial Services',
           tag: 'FS',
-          paragraphs: [
-            'We work on financial products, payment systems and regulated platforms, applying AI to impact analysis, requirements engineering, functional and technical analysis, software development, testing and documentation.',
-          ],
+          body: 'Payments, banking, financial infrastructure, compliance and regulated product documentation.',
         },
         {
-          name: 'Aerospace & Defense',
-          tag: 'A&D',
-          paragraphs: [
-            'We work on complex systems such as radar and defense systems, using AI to produce and update analyses, specifications, software, tests and technical manuals.',
-          ],
+          name: 'Defence & Complex Systems',
+          tag: 'DEF',
+          body: 'Large technical documentation sets, specifications, operating procedures, tests and manuals.',
+        },
+        {
+          name: 'Enterprise IT',
+          tag: 'EIT',
+          body:
+            'Product and project knowledge spread across business requirements, technical specifications, repositories and operational documentation.',
         },
       ],
     },
+    recognition: {
+      index: '11',
+      label: 'Recognition',
+      title: 'Recognised for innovation',
+      body:
+        'Deep4IT and the technology behind Indexable have been selected and recognised by leading Italian innovation programmes.',
+      logos: recognitionLogos,
+    },
     about: {
-      label: 'About us',
-      paragraphs: [],
-      statement: [
-        'We turn scattered information into AI-ready knowledge bases.',
-        'On these foundations we build processes that automate activities and increase the capacity of specialist teams.',
+      label: 'Deep4IT',
+      statement: ['The next member of your team', 'should not start from zero.'],
+      paragraphs: [
+        'Whether it is a new person or an AI agent, it must be able to understand what the company knows, which information is valid and where it comes from.',
+        'Indexable brings product and service knowledge back into the organisation, turning it into an asset that stays, evolves and keeps producing value.',
       ],
-      sectorsLine: 'We work in Financial Services and Aerospace & Defense.',
+      emphasis: 'A company that does not retain what it knows cannot be ready for AI.',
+      cta: { label: 'Request an Indexable demo', href: 'mailto:info@deep4it.com?subject=Indexable%20Demo' },
+      tagline: 'Product & service knowledge, made agent-ready.',
       wordmark: 'DEEP4',
       contacts: {
         label: 'Contact',
         lines: ['Via Italia, 44', '20900 Monza, Italy'],
         email: 'info@deep4it.com',
         legal:
-          '\u00a9 2026 Deep4It srl. Tutti i diritti riservati.  |  Capitale sociale: \u20ac 70.000,00  |  P.IVA: 13477300969',
+          '© 2026 Deep4IT srl. All rights reserved.  |  Share capital: € 70,000.00  |  VAT: 13477300969',
       },
     },
   },

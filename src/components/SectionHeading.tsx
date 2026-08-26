@@ -15,15 +15,15 @@ export default function SectionHeading({
     <div id={id} className="relative scroll-mt-24 px-5 md:px-10">
       <div className="mx-auto max-w-[1600px]">
         <div className="flex items-baseline gap-5 border-t border-white/15 pt-6 md:gap-6">
-          <span className="font-display shrink-0 text-[15vw] font-bold leading-none text-transparent md:text-[9vw] [-webkit-text-stroke:1px_rgba(255,255,255,0.28)]">
+          <span className="font-display shrink-0 text-[11vw] font-bold leading-none text-transparent md:text-[9vw] [-webkit-text-stroke:1px_rgba(255,255,255,0.28)]">
             {index}
           </span>
           <div className="flex min-w-0 flex-col gap-3 pb-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/45 md:text-[11px]">
               {label}
             </span>
-            <h2 className="font-display max-w-4xl break-words text-[7.2vw] font-semibold uppercase leading-[1.04] tracking-tight text-white sm:text-3xl md:text-5xl lg:text-6xl">
-              <WordReveal text={title} step={40} />
+            <h2 className="font-display max-w-4xl break-words pr-2 text-[6.4vw] font-semibold uppercase leading-[1.06] tracking-tight text-white sm:text-3xl md:text-5xl lg:text-6xl">
+              <WordReveal text={title} step={24} />
             </h2>
           </div>
         </div>
