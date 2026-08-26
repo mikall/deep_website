@@ -42,3 +42,10 @@ presentation.txt
 # local docs / working notes (not for the repo)
 /doc/
 .playwright-mcp/
+
+# macOS sync duplicates ("file 2.ext") and local Kimi artifacts
+* 2
+* 2.*
+* 2/
+Kimi_Agent_Sitoweb Deep4it/
+Kimi_Agent_Sitoweb Deep4it.zip
